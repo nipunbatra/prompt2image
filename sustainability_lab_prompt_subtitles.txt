@@ -1,0 +1,111 @@
+Output requirements
+
+Aspect ratio: 16:9 (widescreen presentation slide)
+
+Resolution: ultra-high resolution, maximum available (8K-quality, extremely sharp)
+
+Style: clean academic infographic illustration
+
+Use crisp vector-like rendering, suitable for large projectors
+
+No spelling mistakes anywhere
+
+Allowed Text (EXACT — do not paraphrase, do not add anything else)
+
+Title (top left):
+From Space to Street
+AI-Driven Air Quality Systems
+
+Section captions (small, subtle, below each block):
+Emissions
+Detecting pollution sources from space
+
+Modeling
+Fast AI surrogates for air-quality prediction
+
+Sensing
+Equitable and optimal sensor placement
+
+Decision
+Accessible insights for policy and citizens
+
+Footer (bottom right, very small):
+Sustainability Lab · IIT Gandhinagar
+
+Visual Composition
+
+Create a single continuous left-to-right pipeline illustration spanning the entire slide.
+
+1. Emissions (Left)
+
+Satellite-style view of India / Indo-Gangetic Plain
+
+Brick kilns, transport corridors, industries as minimal geometric icons
+
+Earth-observation tiles, grid overlays, bounding boxes
+
+Soft translucent pollution plumes (scientific, non-dramatic)
+
+2. Modeling (Center-Left)
+
+Emissions flowing into neural network structures
+
+Attention-like connections and smooth data streams
+
+Pollution heatmaps emerging from AI models
+
+Visual metaphor: physics-based complexity → AI surrogate simplicity
+
+No equations, no numbers, no extra labels
+
+3. Sensing (Center-Right)
+
+India map abstraction
+
+Sparse existing sensor dots plus new AI-suggested locations
+
+Clear visual signal of improved spatial coverage and fairness
+
+No legends, no counts
+
+4. Decision (Right)
+
+Minimal silhouettes: policymaker, researcher, citizen
+
+Clean UI panels with maps, line plots, and conversational interface shapes
+
+Natural-language interaction implied visually (no text bubbles)
+
+Design Language
+
+Flat + soft-depth hybrid
+
+Calm, confident, policy-ready
+
+Inspired by IPCC figures, Nature Energy covers, OECD AI reports
+
+Editorial, not flashy
+
+Color Palette
+
+Background: off-white or very light gray
+
+Primary colors: deep blue, muted teal
+
+Accents: restrained amber for pollution fields
+
+Avoid neon, harsh reds, dark mode
+
+Hard Negative Constraints
+
+❌ No extra text beyond what is explicitly listed
+
+❌ No spelling variations
+
+❌ No cluttered dashboards
+
+❌ No cartoon or playful style
+
+❌ No photorealistic faces
+
+❌ No cyberpunk or sci-fi aesthetics

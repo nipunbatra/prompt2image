@@ -1,0 +1,114 @@
+Output & Canvas
+
+Aspect ratio: 16:9 (widescreen presentation slide)
+
+Resolution: Ultra-high resolution, ≥ 8K quality
+(extremely sharp, suitable for large projector screens and print)
+
+Style: clean academic infographic illustration
+
+Purpose: keynote / flagship lab overview slide
+
+Allowed Text (ONLY the following, EXACT spellings)
+
+From Space to Street
+AI-Driven Air Quality Systems
+Sustainability Lab · IIT Gandhinagar
+
+Layer labels (small, subtle, sans-serif):
+
+Emissions
+
+Modeling
+
+Sensing
+
+Decision
+
+⚠️ Do not add any other words, numbers, acronyms, or labels
+
+Visual Composition
+
+A single continuous left-to-right visual pipeline, flowing smoothly across the slide.
+
+Section 1 — Emissions (Left)
+
+Satellite-view abstraction of India / Indo-Gangetic Plain
+
+Brick kilns, transport corridors, industries as clean geometric icons
+
+Earth-observation tiles and bounding boxes (ML detection cue)
+
+Soft translucent emission plumes
+
+Label below section: Emissions
+
+Section 2 — Modeling (Center-Left)
+
+Emissions morphing into neural network structures
+
+Graphs, attention-like flows, smooth interpolation
+
+Heatmap fields representing pollution prediction
+
+Visual metaphor: physics → AI surrogate
+
+Label: Modeling
+
+Section 3 — Sensing (Center-Right)
+
+India map abstraction with sparse dots (existing sensors)
+
+New dots appearing optimally across under-served regions
+
+Subtle equity signal through balanced spatial coverage
+
+No legends or numbers
+
+Label: Sensing
+
+Section 4 — Decision (Right)
+
+Minimal silhouettes: policymaker, researcher, citizen
+
+Simple UI panels: map, line plot, conversational interface shapes
+
+Natural-language interaction implied visually (no speech text)
+
+Label: Decision
+
+Design Language
+
+Flat + soft-depth hybrid
+
+Editorial, policy-ready, not flashy
+
+Inspired by IPCC figures, Nature Energy covers, OECD AI reports
+
+Color Palette
+
+Background: off-white / very light gray
+
+Primary: deep blue, muted teal
+
+Accents: restrained amber for pollution fields
+
+No neon, no high-contrast red
+
+Hard Negative Constraints
+
+❌ No extra text beyond the specified labels
+
+❌ No spelling variations or creative typography
+
+❌ No cluttered dashboards
+
+❌ No cartoon style
+
+❌ No photorealistic faces
+
+❌ No dark mode or cyberpunk visuals
+
+Important Imagen Instruction (prevents text removal)
+
+Ensure all specified text appears clearly, legibly, and exactly as written.
