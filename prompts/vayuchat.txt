@@ -1,0 +1,174 @@
+Output & Canvas
+
+Aspect ratio: 16:9 (widescreen presentation slide)
+
+Resolution: Ultra-high resolution, ≥ 8K quality
+(extremely sharp, suitable for large projector screens and print)
+
+Style: clean academic interface demonstration
+Modern web application screenshot aesthetic
+
+Purpose: Single-slide demo poster for VayuChat system
+
+Allowed Text (ONLY the following, EXACT spellings)
+
+Main Header:
+VayuChat
+AI Air Quality Analysis • Sustainability Lab, IIT Gandhinagar
+
+Interface Labels:
+Select Model
+Quick Queries
+Select a question to analyze:
+Getting Started - Simple Questions
+Which city has the highest average PM2.5 levels in 2023?
+Show monthly PM2.5 trends for Delhi in 2023
+Compare PM2.5 levels between winter and summer
+View Generated Code
+Ask about air quality trends, pollution analysis, or city comparisons...
+
+Answer Text:
+VayuChat • 07:38
+Byrnihat has the highest average PM2.5 in 2023: 151.51 μg/m³
+
+Code Snippet (visible in code panel):
+import pandas as pd
+import matplotlib.pyplot as plt
+import seaborn as sns
+import streamlit as st
+import uuid
+import calendar
+import numpy as np
+# Set professional matplotlib styling with high resolution
+plt.style.use('vayuchat.mplstyle')
+
+Brand Element:
+SUSTAINABILITY LAB (small logo mark, top center)
+
+⚠️ Do not add any other words, numbers, or interface elements beyond these
+
+Visual Composition
+
+A clean, modern web interface layout showing the VayuChat conversational AI system in action. The layout should feel like a polished web application screenshot.
+
+Left Panel — Model & Query Selection (≈25% width)
+Clean white sidebar with subtle rounded border
+Dropdown menu showing "gpt-oss-120b" model selection
+"Quick Queries" section below with expandable question list
+Predefined query buttons in a vertical stack
+Minimal icons (question mark, chevron indicators)
+Soft shadows for depth
+
+Center-Right Panel — Chat & Code Interface (≈75% width)
+Top: Clean header with "VayuChat" branding and lab affiliation
+Chat message bubble showing user query in blue accent color
+Response bubble below in light gray/white showing answer with timestamp
+Code panel below the chat with syntax-highlighted Python code
+Visible imports and matplotlib styling setup
+Clean monospace font for code
+Bottom: Input field with placeholder text and send button (blue)
+
+Visual Flow Indicators
+Curved arrows or flow lines connecting:
+1. Model selector → Query selection
+2. Quick queries → Chat interface
+3. Chat response → Generated code panel
+4. Code panel → Custom input field
+
+These should be subtle, editorial-style arrows (not cartoon-like)
+Use coral/red accent color (#f56565) for emphasis
+
+Design Language
+
+Modern web UI aesthetic
+Soft rounded corners (8-12px border radius)
+Clean sans-serif typography (Inter, System UI family)
+Subtle drop shadows for cards/panels
+Professional code editor appearance
+Inspired by: GitHub, ChatGPT interface, Streamlit apps, Observable notebooks
+
+Color Palette
+
+Background: white to very light gray (#fafafa)
+Primary interface: white panels with soft gray borders (#e5e7eb)
+Accent color: bright blue (#3b82f6) for interactive elements
+Text: dark gray (#1f2937) for primary text, medium gray (#6b7280) for secondary
+Code syntax: standard VSCode/GitHub color scheme
+  - Keywords: blue
+  - Strings: green
+  - Comments: gray
+Brand colors: teal/blue from Sustainability Lab
+
+UI Component Specifications
+
+Model Dropdown:
+- White background
+- Subtle border
+- Clear dropdown arrow
+- Currently selected: "gpt-oss-120b"
+
+Quick Queries Panel:
+- Light background card
+- List of clickable query buttons
+- Hover states implied through subtle design
+- Small category header
+
+Chat Bubbles:
+- User query: blue background, white text, right-aligned visual feel
+- System response: light gray background, dark text
+- Timestamp and sender label included
+- Rounded bubble corners
+
+Code Panel:
+- Dark or light code editor theme (choose one for consistency)
+- Line numbers optional
+- Syntax highlighting active
+- "View Generated Code" header/tab visible
+
+Input Field:
+- Full-width text input at bottom
+- Placeholder text visible
+- Blue send button or icon on right
+- Clean border, subtle focus state
+
+Hard Negative Constraints
+
+❌ No extra text beyond specified interface labels
+❌ No cartoon or playful illustration style
+❌ No actual running code output or visualizations (only code text)
+❌ No photorealistic screenshots with browser chrome/window decorations
+❌ No cluttered dashboards or busy data visualizations
+❌ No dark mode (use light theme)
+❌ No neon or fluorescent accent colors
+❌ No handwritten or script fonts
+❌ No 3D rendered elements
+❌ No stock photo elements or generic icons
+❌ No visible URLs or navigation breadcrumbs
+❌ No actual data visualizations (charts, graphs) - focus on interface only
+
+Layout Specifications
+
+Left sidebar: 20-25% of width
+Main chat/code area: 75-80% of width
+Adequate whitespace and padding throughout
+Clear visual hierarchy: header > chat > code > input
+Annotations/arrows should not overwhelm the interface
+Interface should feel production-ready, not wireframe
+
+Quality Requirements
+
+Render at maximum available resolution
+Crisp text rendering (all labels must be readable)
+No compression artifacts
+Print-ready quality for academic poster
+Consistent spacing and alignment
+Professional UI/UX design standards
+
+Functional Context
+
+VayuChat is an LLM-powered conversational interface for air quality data analysis
+Users can ask natural language questions about pollution trends, city comparisons, temporal patterns
+System generates executable Python code using pandas, matplotlib, seaborn
+Responses include both natural language answers and the underlying code
+Designed for researchers, policymakers, and citizens to democratize access to air quality insights
+Built on top of CPCB (Central Pollution Control Board) India dataset

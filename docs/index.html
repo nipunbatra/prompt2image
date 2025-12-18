@@ -230,98 +230,106 @@
     </div>
 
     <script>
-        // Auto-discover images and prompts from directory structure
-        const knownImages = [
-            'overall-lab.txt',
-            'overall-lab-three-pillars.txt',
-            'sustainability_lab_prompt.txt',
-            'sustainability_lab_prompt_subtitles.txt',
-            'join-us.txt',
-            'join-us-minimal.txt'
-        ];
-
-        function extractDateFromFilename(filename) {
-            try {
-                const parts = filename.replace('.png', '').split('_');
-                if (parts.length >= 2) {
-                    const dateStr = parts[parts.length - 2];
-                    if (dateStr.length === 8 && /^\d+$/.test(dateStr)) {
-                        return `${dateStr.slice(0,4)}-${dateStr.slice(4,6)}-${dateStr.slice(6,8)}`;
-                    }
-                }
-            } catch(e) {}
-            return new Date().toISOString().split('T')[0];
-        }
-
-        function generateTitle(filename) {
-            let base = filename.replace('.png', '');
-            const parts = base.split('_');
-
-            // Remove timestamp parts (last 2 if they look like date/time)
-            if (parts.length >= 2 && /^\d{8}$/.test(parts[parts.length - 2])) {
-                parts.splice(-2);
+        // Image and prompt data
+        const images = [
+            {
+                        "filename": "vayuchat_20251218_144659.png",
+                        "promptFile": "vayuchat.txt",
+                        "title": "Vayuchat",
+                        "date": "2025-12-18"
+            },
+            {
+                        "filename": "sustainability_lab_prompt_subtitles_generated_20251217_162815.png",
+                        "promptFile": "sustainability_lab_prompt.txt",
+                        "title": "Sustainability Lab Prompt Subtitles Generated",
+                        "date": "2025-12-17"
+            },
+            {
+                        "filename": "sustainability_lab_prompt_subtitles_generated.png",
+                        "promptFile": "sustainability_lab_prompt.txt",
+                        "title": "Sustainability Lab Prompt",
+                        "date": "2025-12-18"
+            },
+            {
+                        "filename": "sustainability_lab_prompt_generated_20251218_100621.png",
+                        "promptFile": "sustainability_lab_prompt.txt",
+                        "title": "Sustainability Lab Prompt Generated",
+                        "date": "2025-12-18"
+            },
+            {
+                        "filename": "sustainability_lab_prompt_generated.png",
+                        "promptFile": "sustainability_lab_prompt.txt",
+                        "title": "Sustainability Lab",
+                        "date": "2025-12-18"
+            },
+            {
+                        "filename": "overall-lab_generated_20251218_100438.png",
+                        "promptFile": "overall-lab.txt",
+                        "title": "Overall-Lab Generated",
+                        "date": "2025-12-18"
+            },
+            {
+                        "filename": "overall-lab_generated.png",
+                        "promptFile": "overall-lab.txt",
+                        "title": "",
+                        "date": "2025-12-18"
+            },
+            {
+                        "filename": "overall-lab-three-pillars_generated_20251218_101021.png",
+                        "promptFile": "overall-lab.txt",
+                        "title": "Overall-Lab-Three-Pillars Generated",
+                        "date": "2025-12-18"
+            },
+            {
+                        "filename": "overall-lab-three-pillars_generated.png",
+                        "promptFile": "overall-lab.txt",
+                        "title": "",
+                        "date": "2025-12-18"
+            },
+            {
+                        "filename": "join-us_generated_20251218_101314.png",
+                        "promptFile": "join-us.txt",
+                        "title": "Join-Us Generated",
+                        "date": "2025-12-18"
+            },
+            {
+                        "filename": "join-us_generated.png",
+                        "promptFile": "join-us.txt",
+                        "title": "",
+                        "date": "2025-12-18"
+            },
+            {
+                        "filename": "join-us-minimal_generated_20251218_101810.png",
+                        "promptFile": "join-us.txt",
+                        "title": "Join-Us-Minimal Generated",
+                        "date": "2025-12-18"
+            },
+            {
+                        "filename": "join-us-minimal_generated.png",
+                        "promptFile": "join-us.txt",
+                        "title": "",
+                        "date": "2025-12-18"
             }
+];
 
-            return parts.map(p => p.charAt(0).toUpperCase() + p.slice(1)).join(' ');
-        }
-
-        function findMatchingPrompt(imageName) {
-            const baseName = imageName.replace('.png', '').split('_');
-
-            // Remove timestamp pattern
-            if (baseName.length >= 2 && /^\d{8}$/.test(baseName[baseName.length - 2])) {
-                baseName.splice(-2);
-            }
-
-            const cleanName = baseName.join('_');
-
-            for (const prompt of knownImages) {
-                const promptBase = prompt.replace('.txt', '');
-                if (cleanName.includes(promptBase) || promptBase.includes(cleanName)) {
-                    return prompt;
-                }
-            }
-
-            return null;
-        }
-
-        async function loadGallery() {
+        // Generate gallery cards
+        function generateGallery() {
             const gallery = document.getElementById('gallery');
 
-            // Hardcoded list - in production, these would come from a manifest or directory listing
-            const imageFiles = [
-                'sustainability_lab_prompt_subtitles_generated_20251217_162815.png',
-                'sustainability_lab_prompt_generated_20251218_100621.png',
-                'overall-lab_generated_20251218_100438.png',
-                'overall-lab-three-pillars_generated_20251218_101021.png',
-                'join-us_generated_20251218_101314.png',
-                'join-us-minimal_generated_20251218_101810.png',
-                'sustainability_lab_illustration_20251217_162237.png',
-                'vayubench_poster.png'
-            ];
-
-            imageFiles.forEach(filename => {
-                const promptFile = findMatchingPrompt(filename);
-                if (!promptFile && !filename.includes('illustration') && !filename.includes('poster')) {
-                    return; // Skip if no matching prompt
-                }
-
+            images.forEach(img => {
                 const card = document.createElement('div');
                 card.className = 'card';
 
-                const title = generateTitle(filename);
-                const date = extractDateFromFilename(filename);
-
                 card.innerHTML = `
-                    <img src="outputs/${filename}" alt="${title}" class="card-image" onclick="openImageModal('outputs/${filename}')">
+                    <img src="outputs/${img.filename}" alt="${img.title}" class="card-image" onclick="openImageModal('outputs/${img.filename}')">
                     <div class="card-content">
-                        <h3 class="card-title">${title}</h3>
+                        <h3 class="card-title">${img.title}</h3>
                         <div class="card-meta">
-                            <span>Generated: ${date}</span>
+                            <span>Generated: ${img.date}</span>
                         </div>
                         <div class="btn-group">
-                            ${promptFile ? `<button class="btn" onclick="viewPrompt('${promptFile}')">View Prompt</button>` : ''}
-                            <a href="outputs/${filename}" download class="btn">Download</a>
+                            <button class="btn" onclick="viewPrompt('${img.promptFile}')">View Prompt</button>
+                            <a href="outputs/${img.filename}" download class="btn">Download</a>
                         </div>
                     </div>
                 `;
@@ -376,7 +384,7 @@
         }
 
         // Initialize gallery on page load
-        loadGallery();
+        generateGallery();
     </script>
 </body>
 </html>
