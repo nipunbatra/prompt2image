@@ -325,7 +325,7 @@ def generate_gallery():
                 card.className = 'card';
 
                 card.innerHTML = `
-                    <img src="../outputs/${img.filename}" alt="${img.title}" class="card-image" onclick="openImageModal('../outputs/${img.filename}')">
+                    <img src="outputs/${img.filename}" alt="${img.title}" class="card-image" onclick="openImageModal('outputs/${img.filename}')">
                     <div class="card-content">
                         <h3 class="card-title">${img.title}</h3>
                         <div class="card-meta">
@@ -333,7 +333,7 @@ def generate_gallery():
                         </div>
                         <div class="btn-group">
                             <button class="btn" onclick="viewPrompt('${img.promptFile}')">View Prompt</button>
-                            <a href="../outputs/${img.filename}" download class="btn">Download</a>
+                            <a href="outputs/${img.filename}" download class="btn">Download</a>
                         </div>
                     </div>
                 `;
@@ -360,7 +360,7 @@ def generate_gallery():
             const promptText = document.getElementById('promptText');
 
             try {
-                const response = await fetch(`../prompts/${promptFile}`);
+                const response = await fetch(`prompts/${promptFile}`);
                 const text = await response.text();
                 promptText.textContent = text;
                 modal.classList.add('active');
