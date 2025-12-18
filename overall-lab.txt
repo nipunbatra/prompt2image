@@ -1,0 +1,71 @@
+Output Requirements Aspect ratio: 16:9 (widescreen presentation slide) Resolution: ultra-high resolution, maximum 
+available (8K-quality, extremely sharp) Style: clean academic infographic illustration Use crisp vector-like rendering, 
+suitable for large projectors and conference displays No spelling mistakes anywhere Absolute text accuracy required
+Allowed Text (EXACT 
+ do not paraphrase, do not add anything else) Title (top center, prominent): Sustainability Lab Subtitle (below title, 
+smaller): AI for Environment, Energy, and Health Research Pillar Labels (placed within or near each visual section): 
+Observe Satellite imagery and remote sensing for pollution source detection Model AI surrogates and spatial inference 
+for air quality prediction Sense Optimal sensor placement and mobile environmental monitoring Decide LLM-powered 
+interfaces for policy and public engagement Sustain Energy disaggregation and health sensing for sustainable living 
+Footer (bottom center, small): IIT Gandhinagar Visual Composition Create a unified visual narrative flowing 
+left-to-right with five interconnected research pillars. The composition should suggest a complete research ecosystem 
+from observation to action. Use subtle visual connectors (flowing data streams, light gradient transitions) to unify 
+the pillars into a cohesive whole. 1. Observe (Far Left) Visual Elements: - Orbital view showing India and South Asia 
+from space - Satellite tile grid overlay with detection bounding boxes - Three distinct brick kiln structures visible: 
+circular (CFCBK), rectangular (FCBK), and zigzag patterns - Minimal geometric icons representing industrial emissions 
+sources - Subtle atmospheric haze layer over the Indo-Gangetic Plain - Earth observation tiles in a grid pattern 
+Technical Details: - Show oriented bounding boxes (OBB) around detected structures - Include grid cell decomposition 
+suggesting systematic coverage - Represent 2.8 million square kilometer scale subtly through expansive view - 
+Color-code different kiln types with subtle variations 2. Model (Center-Left) Visual Elements: - Neural network 
+architecture emerging from satellite data - Gaussian process surfaces showing spatial interpolation - Uncertainty bands 
+around predictions (epistemic uncertainty visualization) - Heatmap gradients showing PM2.5 concentration fields - 
+Temporal sequences suggesting forecasting capability - Physics-informed connections (diffusion and advection flow 
+patterns) Technical Details: - Show data flow from sparse sensor points to dense prediction surfaces - Visualize 
+attention-like mechanisms and data streams - Represent surrogate model concept: complex physics simplified to AI - 
+Include subtle node-edge structures for graph neural networks - No equations, no mathematical notation visible 3. Sense 
+(Center) Visual Elements: - Abstract India map with sparse existing sensor locations (dots) - AI-suggested new sensor 
+placements (distinct markers) - Mobile sensing concept: abstracted bus/vehicle paths through city grid - Coverage 
+improvement visualization (expanding circles or Voronoi cells) - Equity-focused distribution pattern (sensors in 
+underserved areas highlighted) - Spatial interpolation toolkit concept (Kriging, IDW patterns) Technical Details: - 
+Show before/after sensor density contrast - Visualize optimal placement algorithm output - Include mobile sensing 
+trajectories (Delhi bus routes abstraction) - Represent polire toolkit concept through interpolation patterns - No 
+legends, no numerical counts, no axis labels 4. Decide (Center-Right) Visual Elements: - Natural language interface 
+representation (chat-like UI panels) - Code generation flow (query to Python to visualization) - Multiple stakeholder 
+silhouettes: policymaker at desk, researcher with laptop, citizen with phone - Dashboard screens showing maps, 
+time-series plots, bar charts - Conversational interaction implied through speech-bubble-like shapes (no text inside) - 
+Data democratization concept: complex data simplified for diverse users Technical Details: - Show VayuBuddy/VayuChat 
+system concept - Visualize LLM-powered code generation pipeline abstractly - Include CPCB data flow representation - 
+Show multiple output types: textual answers, visualizations, map plots - Clean UI aesthetic, no cluttered dashboards 5. 
+Sustain (Far Right) Visual Elements: - Smart home/building outline with energy flow visualization - Disaggregated 
+appliance signatures (waveform patterns) - Thermal camera view of human face showing respiration detection (nostril 
+heat patterns) - Health monitoring concept: mask with embedded sensors (SpiroMask) - Wearable device showing 
+calorie/energy expenditure - Energy meter connecting to individual appliance icons Technical Details: - Show NILMTK 
+energy disaggregation concept - Visualize JoulesEye thermal imaging for respiration - Include fitness/exercise context 
+(cycling, running silhouettes) - Represent non-intrusive load monitoring principle - Show health sensing as extension 
+of sustainability mission Visual Connectors Between Pillars - Flowing data streams connecting adjacent sections - 
+Gradient color transitions suggesting continuous pipeline - Subtle particle flow patterns representing air quality data 
+movement - Light connecting lines suggesting feedback loops (sensing informs modeling, modeling guides sensing) Design 
+Language Style: Flat design with soft-depth hybrid, subtle shadows for hierarchy Mood: Calm, confident, research-grade, 
+policy-ready Aesthetic Inspiration: IPCC assessment figures, Nature portfolio journal covers, OECD AI policy reports, 
+World Bank data visualization standards Tone: Editorial, academic, authoritative but accessible Avoid: Marketing 
+flashiness, startup aesthetics, infographic clich s Color Palette Background: Off-white to very light warm gray 
+gradient (left to right) Primary: Deep blue (#1a365d) for structural elements and text Secondary: Muted teal (#2c7a7b) 
+for AI/technology elements Accent 1: Restrained amber/ochre (#c77a00) for pollution/emission fields Accent 2: Soft sage 
+green (#68d391) for health and sustainability elements Highlight: Coral (#f56565) for key detection points and alerts 
+(use sparingly) Avoid: Neon colors, harsh saturated reds, pure black backgrounds, dark mode aesthetics Typography 
+Guidance - Title: Sans-serif, bold, substantial weight - Section labels: Sans-serif, medium weight, smaller than title 
+- Footer: Sans-serif, light weight, minimal size - All text must be crisp, high contrast, readable at poster scale Hard 
+Negative Constraints
+ No extra text beyond what is explicitly listed above No spelling variations or creative text interpretations No 
+ cluttered dashboards or busy interface mockups No cartoon or playful illustration style No photorealistic human faces 
+ (silhouettes only) No cyberpunk, sci-fi, or futuristic aesthetics No dark backgrounds or dark mode styling No neon or 
+ fluorescent colors No 3D rendered metallic or glossy surfaces No stock photo elements or clip art style No excessive 
+ iconography or icon grids No pie charts or bar graphs with visible numerical data No corporate infographic templates 
+ No geographic labels or city names on maps No visible code snippets or programming syntax No brand logos except as 
+ specified in footer
+Composition Balance - Equal visual weight across all five pillars - Central pillar (Sense) can be slightly elevated as 
+connecting element - Adequate whitespace between sections for visual breathing room - Unified horizon line or baseline 
+across the composition - Visual hierarchy: Title > Pillar Labels > Visual Elements > Footer Quality Specifications - 
+Render at maximum available resolution - Ensure all edges are crisp and vector-like - No compression artifacts - 
+Print-ready quality for large format poster (A0 or larger)
+- Color accuracy for professional printing

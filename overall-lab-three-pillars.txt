@@ -1,0 +1,112 @@
+Output Requirements Aspect ratio: 16:9 (widescreen presentation slide) Resolution: ultra-high resolution, maximum 
+available (8K-quality, extremely sharp) Style: clean academic infographic illustration Use crisp vector-like rendering, 
+suitable for large projectors and conference displays No spelling mistakes anywhere Absolute text accuracy required
+Allowed Text (EXACT 
+ do not paraphrase, do not add anything else) Title (top center, prominent): Sustainability Lab Subtitle (below title): 
+AI for a Sustainable Future Domain Headers (large, clearly separating three zones): Environment Energy Health 
+Technology/Application Labels (small, placed near relevant visuals): Under Environment: SentinelKilnDB Brick kiln 
+detection from satellite imagery VayuBuddy LLM-powered air quality chatbot Sensor Placement Optimal and equitable 
+monitoring networks Under Energy: NILMTK Non-intrusive load monitoring toolkit Energy Disaggregation Appliance-level 
+consumption from single meter Under Health: JoulesEye Calorie estimation from thermal respiration sensing SpiroMask 
+Lung health monitoring from smart masks Footer (bottom center, small): IIT Gandhinagar Visual Composition Create a 
+triptych layout with three clearly defined vertical zones for Environment, Energy, and Health. Each zone should 
+showcase the domain's key technologies with visual representations of their applications. Subtle visual connectors can 
+link the three domains at the bottom to suggest the unified sustainability mission.
+ENVIRONMENT (Left Third 
+ approximately 40% width, largest section) This section flows top-to-bottom showing the complete pipeline from space to 
+policy.
+Top Layer 
+ Satellite Observation: - Orbital perspective of South Asia with the Indo-Gangetic Plain visible - Satellite imagery 
+tiles in grid pattern - Oriented bounding boxes detecting three brick kiln types:
+  * Circular kilns (CFCBK) 
+ ring shapes
+  * Rectangular kilns (FCBK) 
+ elongated ovals
+  * Zigzag kilns 
+ distinctive angular patterns - Subtle pollution plumes over industrial clusters - Earth observation aesthetic with 
+tile overlays
+Middle Layer 
+ AI Modeling and Sensing: - Neural network structure processing satellite feeds - India map abstraction showing:
+  * Sparse existing sensor points (few dots) * AI-recommended new sensor locations (additional markers) * Coverage 
+  expansion visualization (Voronoi-like cells)
+- Mobile sensing concept: vehicle path through urban grid (Delhi bus routes abstracted) - Gaussian process 
+interpolation surface showing PM2.5 prediction field - Heatmap gradient from clean (blue-green) to polluted (amber)
+Bottom Layer 
+ Decision Interface: - Clean chat interface panel showing natural language interaction
+- Code generation flow: question 
+ Python visualization - Output examples: line plot, map plot, bar chart (abstract, no numbers) - Multiple user 
+silhouettes: policymaker, researcher, citizen - Data democratization concept: complex data made accessible Technologies 
+to visually represent:
+ SentinelKilnDB: 62,671 kilns across 4 countries, OBB detection VayuBuddy/VayuChat: LLM converts questions to code to 
+ insights Polire: Spatial interpolation toolkit (Kriging, GP, IDW) AirDelhi: Mobile sensing on Delhi buses
+ENERGY (Center Third 
+ approximately 30% width) This section shows the concept of disaggregating whole-home energy into appliance-level 
+consumption.
+Top Layer 
+ Aggregate Signal: - Single smart meter icon on building outline - Aggregate power waveform (complex, multi-component 
+signal) - Arrow indicating "one meter measures everything"
+Middle Layer 
+ AI Disaggregation: - Neural network / signal processing abstraction - Waveform decomposition visualization - Machine 
+learning architecture processing time-series
+Bottom Layer 
+ Appliance-Level Output: - Individual appliance icons with separated waveforms:
+  * Refrigerator 
+ continuous low baseline with compressor cycles
+  * Washing machine 
+ distinct wash/spin pattern
+  * Microwave 
+ sharp rectangular pulse
+  * Kettle 
+ high power spike
+  * HVAC 
+ variable cycling pattern - Each appliance connected to its signature waveform - Itemized energy bill concept (visual, 
+no numbers) Technologies to visually represent:
+ NILMTK: Open-source toolkit for NILM research Energy Disaggregation: Single meter to appliance breakdown Uncertainty 
+ Quantification: Error bands on predictions
+HEALTH (Right Third 
+ approximately 30% width) This section shows thermal and acoustic sensing for health monitoring.
+Top Layer 
+ JoulesEye System: - Thermal camera view of face (abstract heat map, not photorealistic) - Nostril region highlighted 
+showing temperature fluctuation pattern - Respiration waveform extracted from thermal signal - Exercise context: 
+cycling silhouette or treadmill outline - Smartwatch concept showing calorie output
+Middle Layer 
+ Processing Pipeline:
+- Thermal video frames 
+ signal processing deep learning - Respiration rate, temperature, heart rate as inputs - Energy expenditure 
+(VO2/calories) as output - Comparison: thermal approach vs heart-rate-only (thermal more accurate)
+Bottom Layer 
+ SpiroMask System: - Face mask outline with embedded microphone sensor - Acoustic waveform from breathing through mask 
+- Lung function parameters visualization (spirometry concept) - Healthcare application: continuous respiratory 
+monitoring - Both N95 and cloth mask variants suggested Technologies to visually represent:
+ JoulesEye: 5.8% MAPE vs 37.6% for smartwatch-only SpiroMask: ATS-compliant lung volume estimation Thermal Imaging: 
+ Low-resolution cameras sufficient (32x24 pixels)
+UNIFYING ELEMENTS Bottom Connector Bar: - Subtle horizontal element linking all three domains - Flowing gradient 
+suggesting unified mission
+- Common thread: "AI + Sensing 
+ Sustainable Impact" Visual Flow: - Data flows from left (observation) toward right (human wellbeing) - Environment 
+data can inform health (air quality affects respiratory health) - Energy efficiency supports environmental 
+sustainability - Circular economy concept subtly implied Design Language Style: Flat design with soft-depth hybrid, 
+subtle shadows for hierarchy Mood: Calm, confident, research-grade, policy-ready Aesthetic Inspiration: IPCC assessment 
+figures, Nature portfolio covers, Science journal graphics Tone: Editorial, academic, authoritative, technically 
+credible Layout: Clear triptych with defined boundaries between domains Color Palette Background: Off-white (#fafafa) 
+to very light warm gray Environment Section: Deep blue (#1a365d) primary, amber (#c77a00) for pollution Energy Section: 
+Electric teal (#0d9488) primary, warm yellow (#eab308) for energy Health Section: Coral red (#dc2626) primary, soft 
+pink (#fda4af) for thermal Connectors: Neutral gray (#6b7280) for shared elements Avoid: Neon, harsh saturated colors, 
+dark backgrounds Typography Hierarchy 1. Lab Title: Largest, bold sans-serif, centered 2. Domain Headers 
+(Environment/Energy/Health): Large, bold, section anchors 3. Technology Names (SentinelKilnDB, NILMTK, etc.): Medium, 
+semi-bold 4. Descriptions: Small, regular weight, italicized or lighter 5. Footer: Smallest, understated Hard Negative 
+Constraints
+ No extra text beyond what is explicitly listed No spelling variations No cluttered dashboards No cartoon or playful 
+ style No photorealistic human faces (use silhouettes, abstract thermal views) No cyberpunk or sci-fi aesthetics No 
+ dark mode or dark backgrounds No neon colors No 3D metallic renders No stock photo elements No visible numerical data 
+ on charts No geographic labels on maps No visible code syntax No brand logos except IIT Gandhinagar in footer No emoji 
+ or playful icons
+Specific Visual Requirements For SentinelKilnDB: - Show oriented bounding boxes (rotated rectangles, not axis-aligned) 
+- Three kiln types visually distinguishable - Scale: continental coverage implied For VayuBuddy: - Chat interface with 
+question-answer flow - Code generation intermediate step - Multiple output types (text, plot, map) For NILMTK: - 
+Aggregate-to-disaggregate flow clear - 5+ appliance types shown - Waveform signatures distinct per appliance For 
+JoulesEye: - Thermal color map on face (red=hot near nose, blue=cooler) - Respiration signal extraction visible - 
+Exercise/fitness context For SpiroMask: - Microphone placement in mask visible - Breathing waveform output - 
+Clinical/healthcare aesthetic Quality Specifications - Maximum available resolution - Vector-crisp edges - Print-ready 
+for A0 poster or larger
+- CMYK-safe colors for printing

@@ -73,38 +73,47 @@ def generate_from_prompt_file(prompt_file, output_file=None):
             )
         )
 
+        print("Response received, processing image...")
+
         # Extract and save the generated image
         if response.candidates and response.candidates[0].content.parts:
             for part in response.candidates[0].content.parts:
-                if hasattr(part, 'inline_data'):
-                    # Decode base64 image data
-                    image_data = base64.b64decode(part.inline_data.data)
-                    generated_img = Image.open(BytesIO(image_data))
+                if hasattr(part, 'inline_data') and part.inline_data is not None:
+                    if hasattr(part.inline_data, 'data') and part.inline_data.data is not None:
+                        # Check if data is already bytes or needs base64 decoding
+                        if isinstance(part.inline_data.data, bytes):
+                            image_data = part.inline_data.data
+                        else:
+                            image_data = base64.b64decode(part.inline_data.data)
 
-                    # Save the image
-                    generated_img.save(output_file, format='PNG', dpi=(300, 300))
+                        print(f"Image received: {len(image_data)} bytes ({part.inline_data.mime_type})")
 
-                    # Create versioned backup with timestamp
-                    timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")
-                    base_name = os.path.splitext(output_file)[0]
-                    ext = os.path.splitext(output_file)[1]
-                    versioned_file = f"{base_name}_{timestamp}{ext}"
+                        generated_img = Image.open(BytesIO(image_data))
 
-                    # Copy to versioned filename
-                    shutil.copy2(output_file, versioned_file)
+                        # Save the image
+                        generated_img.save(output_file, format='PNG', dpi=(300, 300))
 
-                    print(f"✓ Image generated successfully!")
-                    print(f"✓ Saved to: {output_file}")
-                    print(f"✓ Versioned copy: {versioned_file}")
-                    print(f"✓ Image size: {generated_img.size[0]} x {generated_img.size[1]} pixels")
+                        # Create versioned backup with timestamp
+                        timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")
+                        base_name = os.path.splitext(output_file)[0]
+                        ext = os.path.splitext(output_file)[1]
+                        versioned_file = f"{base_name}_{timestamp}{ext}"
 
-                    # Display image info
-                    print(f"\nImage details:")
-                    print(f"  Format: {generated_img.format}")
-                    print(f"  Mode: {generated_img.mode}")
-                    print(f"  Size: {generated_img.size}")
+                        # Copy to versioned filename
+                        shutil.copy2(output_file, versioned_file)
 
-                    return output_file
+                        print(f"✓ Image generated successfully!")
+                        print(f"✓ Saved to: {output_file}")
+                        print(f"✓ Versioned copy: {versioned_file}")
+                        print(f"✓ Image size: {generated_img.size[0]} x {generated_img.size[1]} pixels")
+
+                        # Display image info
+                        print(f"\nImage details:")
+                        print(f"  Format: {generated_img.format}")
+                        print(f"  Mode: {generated_img.mode}")
+                        print(f"  Size: {generated_img.size}")
+
+                        return output_file
 
         print("Error: No image was generated in the response")
         return None

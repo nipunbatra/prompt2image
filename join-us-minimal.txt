@@ -1,0 +1,229 @@
+Output Requirements
+Aspect ratio: 16:9
+Resolution: ultra-high resolution, 8K-quality
+Style: ultra-minimal, Swiss design inspired, generous whitespace
+Crisp vector rendering, editorial elegance
+No spelling mistakes
+
+═══════════════════════════════════════════════════════════════════
+ALLOWED TEXT (EXACT — minimal, impactful)
+═══════════════════════════════════════════════════════════════════
+
+Title (large, commanding):
+Join Us
+
+Subtitle (elegant, understated):
+Sustainability Lab · IIT Gandhinagar
+
+Three Domain Words (spaced across middle):
+Environment          Energy          Health
+
+Single Stats Row (bold numerals, minimal labels):
+50+ Alumni     |     NeurIPS · AAAI · UbiComp     |     320GB GPU
+
+Bottom Line (small, refined):
+Google · Microsoft · NVIDIA · CMU · Caltech · ETH Zurich
+
+═══════════════════════════════════════════════════════════════════
+VISUAL COMPOSITION
+═══════════════════════════════════════════════════════════════════
+
+Layout Philosophy:
+- 70% whitespace minimum
+- Content breathes
+- Every element earns its place
+- Asymmetric balance
+- Single focal point
+
+Structure (Top to Bottom):
+
+TOP ZONE (20% of height):
+- "Join Us" — massive, bold, left-aligned
+- "Sustainability Lab · IIT Gandhinagar" — small, refined, below title
+- Nothing else. Let it breathe.
+
+MIDDLE ZONE (50% of height):
+- Three minimal iconic visuals horizontally spaced
+- Each represents one domain with ONE elegant symbol:
+
+  Environment: Single satellite orbital arc over abstract India silhouette
+  
+  Energy: Single sine wave transforming into three smaller waves (disaggregation)
+  
+  Health: Single breath waveform with subtle thermal gradient
+
+- Domain words "Environment | Energy | Health" below icons
+- Icons are line-art style, single stroke weight, deep blue
+- Generous spacing between the three
+
+BOTTOM ZONE (30% of height):
+- Stats row with bold numbers, minimal styling
+- Partner/venue names in a single elegant line
+- All text in cool gray, understated
+
+═══════════════════════════════════════════════════════════════════
+DESIGN LANGUAGE
+═══════════════════════════════════════════════════════════════════
+
+Style References:
+- Apple product pages
+- Dieter Rams / Braun design
+- Swiss International Style
+- Kinfolk magazine layouts
+- Stripe/Linear website aesthetics
+
+Principles:
+- Subtract until it breaks, then add one thing back
+- Typography IS the design
+- Icons as punctuation, not illustration
+- Negative space as active element
+- Quiet confidence over loud declaration
+
+Visual Tension:
+- Large title vs. delicate details
+- Bold numerals vs. refined labels
+- Geometric icons vs. organic whitespace
+- Asymmetry that feels balanced
+
+═══════════════════════════════════════════════════════════════════
+COLOR PALETTE (Restrained)
+═══════════════════════════════════════════════════════════════════
+
+Background: Pure white (#ffffff) or warm white (#fefefe)
+
+Primary: 
+- Deep navy (#0f172a) — Title and icons only
+
+Secondary:
+- Cool gray (#64748b) — All supporting text
+
+Accent (used sparingly, one instance only):
+- Teal (#0d9488) — Single subtle highlight on one icon element
+
+That's it. Three colors maximum.
+
+═══════════════════════════════════════════════════════════════════
+TYPOGRAPHY
+═══════════════════════════════════════════════════════════════════
+
+Title "Join Us":
+- Ultra bold, geometric sans-serif (Helvetica Neue Bold / Inter Black)
+- Massive scale — dominates upper left
+- Letter-spacing: tight
+
+Subtitle:
+- Light weight, same typeface family
+- Small caps or refined spacing
+- 1/6th the size of title
+
+Domain Words:
+- Medium weight
+- Generous letter-spacing (tracked out)
+- All caps
+
+Stats:
+- Bold numerals
+- Light labels
+- Monospace or tabular figures
+
+Bottom Line:
+- Light weight
+- Smallest text on poster
+- Separated by subtle dots or pipes
+
+═══════════════════════════════════════════════════════════════════
+ICON SPECIFICATIONS (Ultra-Minimal)
+═══════════════════════════════════════════════════════════════════
+
+Style: Single-line stroke, consistent 2px weight, no fills
+
+Environment Icon:
+- Simple orbital arc (quarter ellipse)
+- Small dot representing satellite
+- Abstract landmass below (3-4 minimal shapes)
+- Total elements: under 5 strokes
+
+Energy Icon:
+- One continuous waveform
+- Splits into three thinner waves
+- Suggests disaggregation elegantly
+- Total elements: 4 lines only
+
+Health Icon:
+- Single breath waveform (inhale-exhale pattern)
+- Subtle warm-to-cool gradient on stroke (only color accent)
+- Total elements: 1 continuous line
+
+Icon Size: Each fits in 120x120px equivalent box
+Icon Spacing: Equal, generous, mathematical
+
+═══════════════════════════════════════════════════════════════════
+SPATIAL RELATIONSHIPS
+═══════════════════════════════════════════════════════════════════
+
+Margins: 
+- Outer margins: 8% of width on all sides
+- Title aligned to left margin
+- Icons centered in middle zone
+- Bottom text aligned to right margin (asymmetric balance)
+
+Grid:
+- Invisible 12-column grid
+- Title spans columns 1-6
+- Icons occupy columns 3-4, 6-7, 9-10
+- Bottom content spans columns 7-12
+
+Vertical Rhythm:
+- Consistent spacing unit (e.g., 32px base)
+- All spacing is multiple of base unit
+- Creates invisible but felt harmony
+
+═══════════════════════════════════════════════════════════════════
+HARD NEGATIVE CONSTRAINTS
+═══════════════════════════════════════════════════════════════════
+
+❌ No gradients (except single icon accent)
+❌ No shadows or depth effects
+❌ No boxes, borders, or containers
+❌ No decorative elements
+❌ No background patterns or textures
+❌ No more than 3 colors
+❌ No icons with fills
+❌ No photographs or realistic imagery
+❌ No busy compositions
+❌ No centered layouts (asymmetry preferred)
+❌ No rounded corners on anything
+❌ No emoji or playful elements
+❌ No bullet points or lists
+❌ No underlines
+❌ No italics
+❌ No more text than specified above
+❌ No logos (text names only for partners)
+
+═══════════════════════════════════════════════════════════════════
+THE FEELING
+═══════════════════════════════════════════════════════════════════
+
+When someone sees this poster, they should feel:
+- "This lab has taste"
+- "They value quality over quantity"
+- "This is serious, world-class research"
+- "I want to be part of something this refined"
+- "Less but better"
+
+The poster should feel like:
+- A breath of fresh air
+- Quiet confidence
+- Intellectual elegance
+- The opposite of cluttered academic posters
+- Something you'd frame
+
+═══════════════════════════════════════════════════════════════════
+QUALITY SPECIFICATIONS
+═══════════════════════════════════════════════════════════════════
+
+- Maximum resolution
+- Perfect vector crispness
+- Print-ready for any size
+- Every pixel intentional
+- Stands out by standing back

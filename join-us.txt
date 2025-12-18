@@ -1,0 +1,106 @@
+Output Requirements Aspect ratio: 16:9 (widescreen presentation slide / digital display) Resolution: ultra-high 
+resolution, maximum available (8K-quality, extremely sharp) Style: modern academic recruitment poster with aspirational 
+tech aesthetic Use crisp vector-like rendering, vibrant yet professional No spelling mistakes anywhere Absolute text 
+accuracy required
+ALLOWED TEXT (EXACT 
+ do not paraphrase, do not add anything else) Main Title (large, prominent, top area): Join the Sustainability Lab 
+Tagline (below title): AI for Environment, Energy, and Health Section Headers (medium size, distributed across poster): 
+Research Impact World-Class Resources Award-Winning Team Global Alumni Network Publication Venues Under Research Impact 
+(small labels near visuals): Environment Satellite imagery, brick kiln detection, air quality chatbots Energy NILMTK 
+toolkit, energy disaggregation Health Thermal sensing, respiratory monitoring, SpiroMask Under World-Class Resources: 
+4x NVIDIA A100 GPUs (320GB VRAM) 512GB RAM Servers Named after Indian mathematicians: Ramanujan, Bhaskar, Aryabhata 
+Under Award-Winning Team: SIGEnergy Rising Star Award 2025 Test of Time Award (NILMTK) Excellence in Teaching Award 
+Microsoft Research PhD Award Fulbright-Nehru Fellowship Prime Minister Research Fellowship UbiComp Gaetano Borriello 
+Award Finalist Heidelberg Laureate Forum Selection Under Global Alumni Network: 50+ Alumni Worldwide Google DeepMind 
+Microsoft Carnegie Mellon UC San Diego Caltech ETH Zurich NYU Tandon UMass Amherst Under Publication Venues (venue 
+logos/text): NeurIPS AAAI UbiComp KDD ACM BuildSys ACM e-Energy ACM IMWUT ACM COMPASS Funding Partners Row (small, near 
+bottom): Google Microsoft NVIDIA Cisco SERB DST Call to Action (bottom, prominent): Shape the Future of Sustainability 
+IIT Gandhinagar VISUAL COMPOSITION Overall Layout: Create a dynamic, aspirational recruitment poster that flows from 
+left to right, showcasing the complete journey from joining the lab to global impact. The design should feel 
+prestigious, cutting-edge, and welcoming.
+TOP BAND 
+ Title and Identity - Main title "Join the Sustainability Lab" in bold, modern sans-serif - Tagline below in lighter 
+weight - Subtle abstract background pattern suggesting data flow, neural networks, satellite grids - Color gradient 
+from deep blue (left) to teal (right) in the title band
+LEFT SECTION 
+ Research Impact (approximately 35% width) Three stacked visual vignettes representing the research domains: 
+Environment Panel: - Satellite view of India with grid overlay - Brick kiln detection bounding boxes - VayuBuddy chat 
+interface abstraction - Air quality heatmap gradient Energy Panel: - Smart meter icon - Waveform disaggregation 
+visualization - NILMTK code/toolkit aesthetic - Appliance icons with energy signatures Health Panel: - Thermal face 
+view showing respiration - SpiroMask outline with sensor - Fitness/exercise silhouette - Health monitoring waveforms
+CENTER SECTION 
+ Resources and Awards (approximately 30% width)
+Top Half 
+ Computational Resources: - Server rack visualization (stylized, not photorealistic) - GPU chips arranged in array 
+(A100 aesthetic) - Names in Devanagari script: , , - Memory/compute specs as subtle data visualization - Green/teal 
+glow suggesting computational power
+Bottom Half 
+ Awards Display: - Trophy/medal icons in gold and silver tones - Award ribbons or certificate abstractions - Timeline 
+or constellation arrangement of achievements - Fulbright, PMRF, Microsoft logos as subtle marks - Rising star visual 
+motif
+RIGHT SECTION 
+ Alumni and Publications (approximately 35% width)
+Top Half 
+ Global Alumni Network: - World map abstraction with connection lines - Nodes at key locations: San Francisco, Seattle, 
+Boston, New York, Zurich - Company logos arranged elegantly: Google DeepMind, Microsoft, Oracle - University 
+shields/marks: CMU, Caltech, UCSD, ETH Zurich, NYU - "50+" prominently displayed - Human silhouettes at nodes 
+suggesting community
+Bottom Half 
+ Publication Venues: - Conference logos arranged in prestige hierarchy - NeurIPS, AAAI, KDD as top tier - UbiComp, 
+BuildSys, IMWUT, COMPASS below - Paper icons or document abstractions - Citation/impact visualization (abstract, no 
+numbers)
+BOTTOM BAND 
+ Funding and Call to Action - Funding partner logos in grayscale row (Google, Microsoft, NVIDIA, Cisco, SERB, DST) - 
+"Shape the Future of Sustainability" as inspirational call to action - "IIT Gandhinagar" as institutional anchor - QR 
+code placeholder (abstract square pattern) - Contact/apply prompt implied visually VISUAL CONNECTORS AND FLOW Journey 
+Narrative: - Subtle flowing lines connecting sections suggesting progression
+- Left to right flow: Join 
+ Research Grow Impact Globally - Particle effects or data streams linking domains - Upward trajectory implied in 
+overall composition Data/AI Aesthetic Elements: - Neural network node patterns as background texture - Satellite grid 
+overlays (subtle, not overwhelming) - Code snippets abstracted as texture (no readable code) - Graph/network motifs 
+throughout Human Element: - Diverse researcher silhouettes at key points - Collaboration implied through grouped 
+figures - Graduation/celebration moment abstracted - Mentorship suggested through paired figures DESIGN LANGUAGE Style: 
+Modern academic meets tech startup energy - Professional but not corporate - Aspirational but grounded - Cutting-edge 
+but accessible - Prestigious but welcoming Mood: - Exciting opportunity - Global impact potential - Supportive 
+community - Intellectual rigor with warmth Aesthetic Inspiration: - Stanford HAI recruitment materials - MIT Media Lab 
+aesthetics - Google AI research presentations - Nature journal covers - Top university PhD program brochures COLOR 
+PALETTE Primary Background: Off-white to light gray gradient (#fafafa to #f0f0f0) Primary Colors:
+- Deep blue (#1e3a5f) 
+ Trust, academia, depth
+- Vibrant teal (#0d9488) 
+ Innovation, technology, sustainability
+- Warm amber (#d97706) 
+ Energy, opportunity, warmth Accent Colors:
+- Gold (#fbbf24) 
+ Awards, achievement, excellence
+- Coral (#f87171) 
+ Health, vitality, action
+- Sage green (#22c55e) 
+ Sustainability, growth, environment Supporting:
+- Cool gray (#6b7280) 
+ Professional elements
+- Slate (#475569) 
+ Text, structure Gradients: - Blue to teal for technology sections - Amber to gold for achievement sections - Teal to 
+green for sustainability themes TYPOGRAPHY HIERARCHY 1. Main Title: Extra bold, 72pt equivalent, deep blue 2. Tagline: 
+Medium weight, 36pt equivalent, teal 3. Section Headers: Bold, 24pt equivalent, deep blue 4. Category Labels: 
+Semi-bold, 18pt equivalent, slate gray 5. Descriptive Text: Regular, 14pt equivalent, cool gray 6. Stats/Numbers: Bold, 
+varying sizes, accent colors 7. Devanagari Names: Traditional script, medium weight, gold accent 8. Footer/CTA: Bold, 
+28pt equivalent, gradient fill HARD NEGATIVE CONSTRAINTS
+ No extra text beyond what is explicitly listed No spelling variations or creative interpretations No photorealistic 
+ human faces (silhouettes only) No cluttered or busy layouts No corporate stock photo aesthetic No dark mode or dark 
+ backgrounds No neon or harsh fluorescent colors No 3D metallic or glossy renders No clip art or cartoon style No 
+ excessive iconography or emoji No visible code syntax or terminal windows No pie charts or complex data visualizations 
+ No handwritten or script fonts No gradients that clash or are garish No country flags No photographs of real people No 
+ busy patterns that compete with content
+SPECIFIC VISUAL REQUIREMENTS For Server Visualization: - Modern rack aesthetic, not dated hardware - LED indicator 
+lights in green/blue - Clean, organized cable management suggested - Sanskrit/Devanagari names integrated elegantly For 
+Alumni World Map: - Minimalist world map silhouette - Connection arcs showing global reach - Node clusters at major 
+tech/academic hubs - No political boundaries emphasized For Award Display: - Elegant trophy/medal iconography - 
+Timeline or constellation arrangement - Gold metallic accents on achievements - Ribbon and laurel motifs (subtle) For 
+Research Domains: - Each domain visually distinct but cohesive - Icons should be meaningful, not generic - Show actual 
+outputs: satellites, masks, waveforms - Avoid abstract placeholder shapes For Publication Venues: - Conference logos 
+should be recognizable - Arranged to show prestige/hierarchy - Paper/document motifs integrated - Academic credibility 
+emphasized QUALITY SPECIFICATIONS - Maximum available resolution for large format printing - Vector-crisp edges on all 
+elements - Print-ready for A0 poster or larger - Digital display compatible (16:9 screens) - CMYK-safe colors for 
+professional printing - High contrast for readability at distance
+- Accessible color combinations (colorblind-friendly)
