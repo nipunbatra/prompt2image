@@ -51,7 +51,8 @@ def generate_from_prompt_file(prompt_file, output_file=None):
     # Auto-generate output filename if not provided
     if output_file is None:
         base_name = os.path.splitext(os.path.basename(prompt_file))[0]
-        output_file = f"{base_name}_generated.png"
+        timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")
+        output_file = f"{base_name}_{timestamp}.png"
 
     print(f"Generating image from prompt: {prompt_file}")
     print(f"Output file: {output_file}")
@@ -93,18 +94,8 @@ def generate_from_prompt_file(prompt_file, output_file=None):
                         # Save the image
                         generated_img.save(output_file, format='PNG', dpi=(300, 300))
 
-                        # Create versioned backup with timestamp
-                        timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")
-                        base_name = os.path.splitext(output_file)[0]
-                        ext = os.path.splitext(output_file)[1]
-                        versioned_file = f"{base_name}_{timestamp}{ext}"
-
-                        # Copy to versioned filename
-                        shutil.copy2(output_file, versioned_file)
-
                         print(f"✓ Image generated successfully!")
                         print(f"✓ Saved to: {output_file}")
-                        print(f"✓ Versioned copy: {versioned_file}")
                         print(f"✓ Image size: {generated_img.size[0]} x {generated_img.size[1]} pixels")
 
                         # Display image info

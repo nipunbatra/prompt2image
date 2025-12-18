@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Generated Images Gallery</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            padding: 2rem;
+        }
+
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+
+        header {
+            text-align: center;
+            color: white;
+            margin-bottom: 3rem;
+        }
+
+        h1 {
+            font-size: 3rem;
+            font-weight: 700;
+            margin-bottom: 0.5rem;
+        }
+
+        .subtitle {
+            font-size: 1.2rem;
+            opacity: 0.9;
+        }
+
+        .gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+            gap: 2rem;
+        }
+
+        .card {
+            background: white;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.3);
+        }
+
+        .card-image {
+            width: 100%;
+            height: 300px;
+            object-fit: cover;
+            cursor: pointer;
+        }
+
+        .card-content {
+            padding: 1.5rem;
+        }
+
+        .card-title {
+            font-size: 1.25rem;
+            font-weight: 600;
+            margin-bottom: 1rem;
+            color: #333;
+        }
+
+        .card-meta {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 1rem;
+            font-size: 0.875rem;
+            color: #666;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 0.5rem 1rem;
+            background: #667eea;
+            color: white;
+            text-decoration: none;
+            border-radius: 6px;
+            transition: background 0.3s ease;
+            border: none;
+            cursor: pointer;
+            font-size: 0.875rem;
+        }
+
+        .btn:hover {
+            background: #5568d3;
+        }
+
+        .btn-group {
+            display: flex;
+            gap: 0.5rem;
+        }
+
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 1000;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.9);
+            overflow: auto;
+        }
+
+        .modal.active {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .modal-content {
+            max-width: 90%;
+            max-height: 90%;
+            margin: auto;
+        }
+
+        .modal-image {
+            width: 100%;
+            height: auto;
+        }
+
+        .close {
+            position: absolute;
+            top: 20px;
+            right: 40px;
+            color: white;
+            font-size: 40px;
+            font-weight: bold;
+            cursor: pointer;
+            z-index: 1001;
+        }
+
+        .close:hover {
+            color: #ccc;
+        }
+
+        .prompt-modal {
+            display: none;
+            position: fixed;
+            z-index: 1000;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.8);
+            overflow: auto;
+        }
+
+        .prompt-modal.active {
+            display: block;
+        }
+
+        .prompt-content {
+            background: white;
+            margin: 5% auto;
+            padding: 2rem;
+            width: 80%;
+            max-width: 800px;
+            border-radius: 12px;
+            max-height: 80vh;
+            overflow-y: auto;
+        }
+
+        .prompt-text {
+            white-space: pre-wrap;
+            font-family: 'Courier New', monospace;
+            font-size: 0.9rem;
+            line-height: 1.6;
+            color: #333;
+        }
+
+        @media (max-width: 768px) {
+            .gallery {
+                grid-template-columns: 1fr;
+            }
+
+            h1 {
+                font-size: 2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>AI Generated Images Gallery</h1>
+            <p class="subtitle">Generated with Gemini 3 Pro Image</p>
+        </header>
+
+        <div class="gallery" id="gallery">
+            <!-- Cards will be inserted here by JavaScript -->
+        </div>
+    </div>
+
+    <!-- Image Modal -->
+    <div id="imageModal" class="modal">
+        <span class="close" onclick="closeImageModal()">&times;</span>
+        <div class="modal-content">
+            <img id="modalImage" class="modal-image" src="" alt="">
+        </div>
+    </div>
+
+    <!-- Prompt Modal -->
+    <div id="promptModal" class="prompt-modal">
+        <span class="close" onclick="closePromptModal()">&times;</span>
+        <div class="prompt-content">
+            <h2 style="margin-bottom: 1rem;">Generation Prompt</h2>
+            <pre class="prompt-text" id="promptText"></pre>
+        </div>
+    </div>
+
+    <script>
+        // Image and prompt data
+        const images = [
+            {
+                        "filename": "sustainability_lab_prompt_subtitles_generated_20251217_162815.png",
+                        "promptFile": "sustainability_lab_prompt.txt",
+                        "title": "Sustainability Lab Prompt Subtitles Generated",
+                        "date": "2025-12-17"
+            },
+            {
+                        "filename": "sustainability_lab_prompt_subtitles_generated.png",
+                        "promptFile": "sustainability_lab_prompt.txt",
+                        "title": "Sustainability Lab Prompt",
+                        "date": "2025-12-18"
+            },
+            {
+                        "filename": "sustainability_lab_prompt_generated_20251218_100621.png",
+                        "promptFile": "sustainability_lab_prompt.txt",
+                        "title": "Sustainability Lab Prompt Generated",
+                        "date": "2025-12-18"
+            },
+            {
+                        "filename": "sustainability_lab_prompt_generated.png",
+                        "promptFile": "sustainability_lab_prompt.txt",
+                        "title": "Sustainability Lab",
+                        "date": "2025-12-18"
+            },
+            {
+                        "filename": "overall-lab_generated_20251218_100438.png",
+                        "promptFile": "overall-lab.txt",
+                        "title": "Overall-Lab Generated",
+                        "date": "2025-12-18"
+            },
+            {
+                        "filename": "overall-lab_generated.png",
+                        "promptFile": "overall-lab.txt",
+                        "title": "",
+                        "date": "2025-12-18"
+            },
+            {
+                        "filename": "overall-lab-three-pillars_generated_20251218_101021.png",
+                        "promptFile": "overall-lab.txt",
+                        "title": "Overall-Lab-Three-Pillars Generated",
+                        "date": "2025-12-18"
+            },
+            {
+                        "filename": "overall-lab-three-pillars_generated.png",
+                        "promptFile": "overall-lab.txt",
+                        "title": "",
+                        "date": "2025-12-18"
+            },
+            {
+                        "filename": "join-us_generated_20251218_101314.png",
+                        "promptFile": "join-us.txt",
+                        "title": "Join-Us Generated",
+                        "date": "2025-12-18"
+            },
+            {
+                        "filename": "join-us_generated.png",
+                        "promptFile": "join-us.txt",
+                        "title": "",
+                        "date": "2025-12-18"
+            },
+            {
+                        "filename": "join-us-minimal_generated_20251218_101810.png",
+                        "promptFile": "join-us.txt",
+                        "title": "Join-Us-Minimal Generated",
+                        "date": "2025-12-18"
+            },
+            {
+                        "filename": "join-us-minimal_generated.png",
+                        "promptFile": "join-us.txt",
+                        "title": "",
+                        "date": "2025-12-18"
+            }
+];
+
+        // Generate gallery cards
+        function generateGallery() {
+            const gallery = document.getElementById('gallery');
+
+            images.forEach(img => {
+                const card = document.createElement('div');
+                card.className = 'card';
+
+                card.innerHTML = `
+                    <img src="../outputs/${img.filename}" alt="${img.title}" class="card-image" onclick="openImageModal('../outputs/${img.filename}')">
+                    <div class="card-content">
+                        <h3 class="card-title">${img.title}</h3>
+                        <div class="card-meta">
+                            <span>Generated: ${img.date}</span>
+                        </div>
+                        <div class="btn-group">
+                            <button class="btn" onclick="viewPrompt('${img.promptFile}')">View Prompt</button>
+                            <a href="../outputs/${img.filename}" download class="btn">Download</a>
+                        </div>
+                    </div>
+                `;
+
+                gallery.appendChild(card);
+            });
+        }
+
+        // Image modal functions
+        function openImageModal(src) {
+            const modal = document.getElementById('imageModal');
+            const modalImg = document.getElementById('modalImage');
+            modal.classList.add('active');
+            modalImg.src = src;
+        }
+
+        function closeImageModal() {
+            document.getElementById('imageModal').classList.remove('active');
+        }
+
+        // Prompt modal functions
+        async function viewPrompt(promptFile) {
+            const modal = document.getElementById('promptModal');
+            const promptText = document.getElementById('promptText');
+
+            try {
+                const response = await fetch(`../prompts/${promptFile}`);
+                const text = await response.text();
+                promptText.textContent = text;
+                modal.classList.add('active');
+            } catch (error) {
+                promptText.textContent = 'Error loading prompt file.';
+                modal.classList.add('active');
+            }
+        }
+
+        function closePromptModal() {
+            document.getElementById('promptModal').classList.remove('active');
+        }
+
+        // Close modals on click outside
+        window.onclick = function(event) {
+            const imageModal = document.getElementById('imageModal');
+            const promptModal = document.getElementById('promptModal');
+
+            if (event.target === imageModal) {
+                closeImageModal();
+            }
+            if (event.target === promptModal) {
+                closePromptModal();
+            }
+        }
+
+        // Initialize gallery on page load
+        generateGallery();
+    </script>
+</body>
+</html>
