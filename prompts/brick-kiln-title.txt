@@ -19,9 +19,13 @@ Presenter Information (bottom right):
 Nipun Batra
 IIT Gandhinagar
 
-Logo (optional, top-left corner):
-SUSTAINABILITY LAB logo (sigmoid S-curve on XY axes + text)
-Small, unobtrusive
+Logo (top-left corner):
+SUSTAINABILITY LAB logo - EXACT rendering:
+- XY axes: horizontal line from (110,85) to (150,85), vertical line from (110,85) to (110,35)
+- Sigmoid S-curve: smooth curve from bottom-left to top-right through the axes
+- Text "SUSTAINABILITY" (larger, medium weight, dark gray #111111)
+- Text "LAB" below (smaller, light weight, letter-spaced, gray #555555)
+Small, clean, vector-like rendering
 
 ⚠️ CRITICAL: No other text. No legends. No labels. No annotations. Clean and minimal.
 
@@ -35,9 +39,11 @@ Shows agricultural landscape with visible kiln structures
 Technical Overlay:
 3 Oriented Bounding Boxes (OBBs) overlaid on the satellite image
 Each OBB highlights a different brick kiln type:
-- One circular kiln (CFCBK - Circular Fixed Chimney Bull's Trench Kiln)
-- One rectangular kiln (FCBK - Fixed Chimney Bull's Trench Kiln)
-- One zigzag pattern kiln (ZKBTK - Zigzag Kiln)
+- One circular kiln (CFCBK - Circular Fixed Chimney Bull's Trench Kiln) with visible tall chimney
+- One rectangular kiln (FCBK - Fixed Chimney Bull's Trench Kiln) with visible tall chimney
+- One zigzag kiln (ZKBTK - Zigzag Kiln) - IMPORTANT: rectangular structure with internal zigzag firing pattern, with visible tall chimney
+
+CRITICAL: All three kilns MUST have tall chimneys visible in the satellite image
 
 OBB boxes should be:
 - Rotated to match kiln orientation
@@ -113,12 +119,14 @@ Satellite Tile:
 - Clean, high-quality satellite rendering
 
 Brick Kiln Structures:
-- Clearly visible in satellite image
+- Clearly visible in satellite image with TALL CHIMNEYS
 - Distinct geometric shapes:
-  - Circular kilns: round outline
-  - Rectangular kilns: elongated rectangular footprint
-  - Zigzag kilns: distinctive zigzag pattern
-- Should be actual visible structures, not just boxes
+  - Circular kilns: round outline + prominent tall chimney in center or side
+  - Rectangular kilns: elongated rectangular footprint + prominent tall chimney
+  - Zigzag kilns: RECTANGULAR footprint (not zigzag shape!) with internal zigzag firing chambers + prominent tall chimney
+- ALL kilns MUST show tall, vertical chimney stacks (key identifying feature)
+- Chimneys appear as thin dark/light vertical structures casting shadows
+- Should be actual visible structures from satellite view, not just boxes
 
 Oriented Bounding Boxes:
 - Precise geometric rectangles
@@ -145,10 +153,15 @@ Presenter Info:
   Line 2: "IIT Gandhinagar"
 - Right-aligned or centered in bottom-right area
 
-Logo (if included):
-- SUSTAINABILITY LAB sigmoid curve
-- Very small (max 5% of slide height)
+Logo:
+- SUSTAINABILITY LAB with exact design:
+  - L-shaped axes (vertical and horizontal lines meeting at corner)
+  - Smooth sigmoid S-curve overlaid on axes
+  - "SUSTAINABILITY" text (larger, medium weight, dark)
+  - "LAB" text (smaller, light weight, letter-spaced, gray)
+- Small (max 5% of slide height)
 - Top-left corner
+- Clean vector rendering
 - Does not compete with title
 
 Hard Negative Constraints
