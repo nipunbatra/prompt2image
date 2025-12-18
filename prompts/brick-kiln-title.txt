@@ -1,0 +1,217 @@
+Output & Canvas
+
+Aspect ratio: 16:9 (widescreen presentation slide)
+Resolution: Ultra-high resolution, ≥ 8K quality
+(extremely sharp, suitable for conference presentations and large displays)
+
+Style: Clean academic title slide
+Satellite imagery aesthetic with technical overlay
+
+Purpose: Title slide for brick kiln detection research presentation
+
+Allowed Text (EXACT spellings, no variations)
+
+Main Title (top third, centered):
+AI From Space to Policy
+Scientific Advances in Brick-Kiln Detection and Compliance
+
+Presenter Information (bottom right):
+Nipun Batra
+IIT Gandhinagar
+
+Logo (optional, top-left corner):
+SUSTAINABILITY LAB logo (sigmoid S-curve on XY axes + text)
+Small, unobtrusive
+
+⚠️ CRITICAL: No other text. No legends. No labels. No annotations. Clean and minimal.
+
+Visual Composition
+
+Main Visual Element:
+Full-width Sentinel-2 satellite tile showing Indo-Gangetic Plain region
+High-resolution true-color or false-color composite
+Shows agricultural landscape with visible kiln structures
+
+Technical Overlay:
+3 Oriented Bounding Boxes (OBBs) overlaid on the satellite image
+Each OBB highlights a different brick kiln type:
+- One circular kiln (CFCBK - Circular Fixed Chimney Bull's Trench Kiln)
+- One rectangular kiln (FCBK - Fixed Chimney Bull's Trench Kiln)
+- One zigzag pattern kiln (ZKBTK - Zigzag Kiln)
+
+OBB boxes should be:
+- Rotated to match kiln orientation
+- Thin, precise lines
+- Bright color (cyan, lime green, or coral) for visibility
+- Clean geometric rectangles at appropriate angles
+- No labels on boxes
+- No confidence scores
+- No class names visible
+
+Layout Structure:
+
+Top Section (30%):
+- Optional SUSTAINABILITY LAB logo (top-left, small)
+- Title centered, spanning most of width
+- Two-line title with clear hierarchy
+- Clean sans-serif typography
+
+Middle Section (60%):
+- Full-width Sentinel-2 satellite tile
+- Earth observation aesthetic
+- Agricultural patchwork visible
+- Brick kilns visible as distinct structures
+- 3 OBB boxes clearly marking different kiln types
+- Clean, uncluttered overlay
+
+Bottom Section (10%):
+- Presenter name and institution (bottom-right)
+- Small, professional font
+- White or light color for visibility
+
+Design Language
+
+Professional academic presentation aesthetic
+Remote sensing / Earth observation style
+Inspired by: Nature Geoscience covers, Science journal imagery, ESA/NASA presentations
+Clean, editorial, high-impact visual
+Typography: Sans-serif (Inter, Helvetica, Arial)
+
+Color Palette
+
+Satellite imagery: Natural Earth tones
+- Agricultural fields: greens, browns, yellows
+- Built structures: grays, whites
+- Water bodies (if present): blues
+- Natural true-color or near-infrared composite
+
+OBB overlay boxes:
+- Bright, high-contrast color (recommend: cyan #00ffff or lime #00ff00)
+- Thin stroke (2-3 pixels)
+- Semi-transparent fill (optional, very subtle)
+- Should stand out clearly against earth tones
+
+Text:
+- Title: Dark gray or black (#1f2937) if on light background
+- Or white if overlaid on darker satellite region
+- Presenter info: White or light color
+- High contrast for readability
+
+Background:
+- Satellite image fills frame
+- Optional subtle vignette at edges
+- No solid color backgrounds
+
+Visual Specifications
+
+Satellite Tile:
+- Sentinel-2 multispectral imagery aesthetic
+- 10m resolution appearance
+- Shows ~5-10 km² area
+- Agricultural landscape of Indo-Gangetic Plain
+- Visible field patterns, roads, settlements
+- Clean, high-quality satellite rendering
+
+Brick Kiln Structures:
+- Clearly visible in satellite image
+- Distinct geometric shapes:
+  - Circular kilns: round outline
+  - Rectangular kilns: elongated rectangular footprint
+  - Zigzag kilns: distinctive zigzag pattern
+- Should be actual visible structures, not just boxes
+
+Oriented Bounding Boxes:
+- Precise geometric rectangles
+- Rotated to match kiln orientation
+- Each box tightly fits the kiln structure
+- Different orientations for each (0°, 45°, 90° variations)
+- Clean, technical detection aesthetic
+- Computer vision overlay style
+
+Typography:
+
+Title:
+- Large, bold sans-serif
+- Two lines:
+  Line 1: "AI From Space to Policy" (slightly larger or different weight)
+  Line 2: "Scientific Advances in Brick-Kiln Detection and Compliance"
+- Centered alignment
+- Professional, academic weight
+
+Presenter Info:
+- Smaller font size
+- Two lines:
+  Line 1: "Nipun Batra"
+  Line 2: "IIT Gandhinagar"
+- Right-aligned or centered in bottom-right area
+
+Logo (if included):
+- SUSTAINABILITY LAB sigmoid curve
+- Very small (max 5% of slide height)
+- Top-left corner
+- Does not compete with title
+
+Hard Negative Constraints
+
+❌ No spelling errors
+❌ No legends or legend boxes
+❌ No axis labels or coordinates
+❌ No scale bars
+❌ No north arrows
+❌ No classification labels on boxes
+❌ No confidence scores
+❌ No metrics or statistics
+❌ No date stamps or metadata
+❌ No clutter or excessive text
+❌ No cartoon or playful elements
+❌ No 3D renderings
+❌ No dark backgrounds (use satellite imagery)
+❌ No pie charts or graphs
+❌ No multiple panels or subplots
+❌ No URLs or links visible
+❌ No QR codes
+❌ No institution logos beyond SUSTAINABILITY LAB
+❌ No crowded interface elements
+❌ No visible satellite platform names (Sentinel-2, etc.) on image
+
+Layout Requirements
+
+Title occupies top 25-30% of slide
+Satellite image fills entire background or 60% middle section
+Clear visual hierarchy: Title → Image → Attribution
+Adequate whitespace around text elements
+No cramped or crowded areas
+Professional spacing
+
+Quality Requirements
+
+Maximum resolution (8K target)
+Crisp satellite imagery (no pixelation)
+Clean text rendering
+Sharp OBB lines
+Print-ready quality
+No compression artifacts
+All text readable at poster scale
+
+Context and Purpose
+
+Presentation on AI/ML for brick kiln detection from satellite imagery
+Research on environmental compliance and emissions monitoring
+Detection of industrial pollution sources across Indo-Gangetic Plain
+Policy relevance: tracking informal industrial emissions
+Scientific contribution: automated detection at scale (2.8M km² coverage)
+Application: compliance monitoring, emission inventory, policy enforcement
+
+Technical Context:
+- Oriented bounding box (OBB) detection model
+- Trained on Sentinel-2 satellite imagery
+- Detects multiple kiln types across Northern India
+- Supports environmental monitoring and policy
+- Part of larger air quality and sustainability research program
+
+Visual Impact:
+Clean, striking satellite view immediately conveys "from space" aspect
+OBB overlays show technical/AI detection capability
+Minimal text keeps focus on visual impact
+Professional aesthetic suitable for scientific conference
+Instantly communicates: remote sensing + AI + environmental policy
