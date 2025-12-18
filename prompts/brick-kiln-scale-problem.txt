@@ -1,0 +1,257 @@
+Output & Canvas
+
+Aspect ratio: 16:9 (widescreen presentation slide)
+Resolution: Ultra-high resolution, ≥ 8K quality
+(extremely sharp, suitable for conference presentations)
+
+Style: Clean infographic diagram
+Problem-solution visual narrative
+
+Purpose: Illustrate the scale challenge of manual brick kiln mapping
+
+Allowed Text (EXACT spellings)
+
+Main Title:
+Core Problem: Geo-locating Brick Kilns at Large Scale
+
+Left Section - Manual Approach (Problem):
+Manual Annotation
+10,000 km² → 12 hours
+India (2,800,000 km²) → 7,000+ hours
+
+Technology change requires complete re-annotation
+
+❌ Manual mapping cannot scale
+
+Right Section - Automated Solution:
+Automated AI Detection
+2,800,000 km² → Minutes
+Real-time monitoring
+Reproducible
+Change detection enabled
+
+✓ Scalable solution for unorganized sector
+
+Center Visual Elements:
+India map outline
+Scale indicators
+Time comparison arrows
+
+Footer:
+IIT Gandhinagar
+
+⚠️ CRITICAL: Perfect spelling. Clean visual hierarchy.
+
+Visual Composition
+
+Layout: Left-Right Comparison with Center Bridge
+
+Left Section (40% width) - The Problem:
+Red/orange tones indicating inefficiency
+
+Visual elements:
+- Small satellite tile (10,000 km²)
+- Person icon with clock showing 12 hours
+- Upward arrow leading to full India map
+- Large clock showing 7,000+ hours
+- Icon showing repeated work (circular arrows) for "re-annotation"
+- Large red X mark at bottom
+- "Manual mapping cannot scale" message
+
+Hierarchy:
+1. "Manual Annotation" header
+2. Scale comparison (small → large)
+3. Time estimates clearly visible
+4. Pain points emphasized
+
+Right Section (40% width) - The Solution:
+Green/blue tones indicating efficiency
+
+Visual elements:
+- Full India map with satellite grid overlay
+- AI/computer icon with fast-forward symbol
+- Clock showing "Minutes"
+- Checkmarks for key benefits
+- Technology icons (refresh, automation symbols)
+- Large green checkmark at bottom
+- "Scalable solution" message
+
+Hierarchy:
+1. "Automated AI Detection" header
+2. Full coverage visualization
+3. Speed/efficiency indicators
+4. Benefits listed with checkmarks
+
+Center Bridge (20% width) - The Transition:
+Visual elements:
+- Large arrow pointing from left to right
+- India map outline transitioning from manual to automated
+- Scale indicators showing 2.8M km²
+- Visual contrast showing transformation
+- "Manual → AI" flow
+
+Design Elements
+
+Icons and Symbols:
+- Person icon (manual work)
+- Clock/stopwatch icons (time)
+- Computer/AI icon (automation)
+- Map outline of India (recognizable shape)
+- Satellite tiles/grid overlay
+- Arrow indicators (comparison, flow)
+- ✓ checkmarks (green)
+- ✗ X marks (red)
+- Refresh/circular arrows (re-work)
+
+Typography:
+- Title: Bold, prominent
+- Section headers: Medium weight
+- Numbers: Large, bold (12 hours, 7,000+ hours, 2.8M km²)
+- Descriptive text: Regular weight
+- Clear hierarchy throughout
+
+Color Scheme
+
+Problem Section (Left):
+- Background: Light red/coral tint (#fff5f5, #ffe5e5)
+- Icons: Dark red (#dc2626)
+- Text: Dark gray (#1f2937)
+- Emphasis: Red accent (#ef4444)
+
+Solution Section (Right):
+- Background: Light green/blue tint (#f0fdf4, #f0f9ff)
+- Icons: Dark green/teal (#059669, #0891b2)
+- Text: Dark gray (#1f2937)
+- Emphasis: Green accent (#10b981)
+
+Center Transition:
+- Neutral background (#f5f5f5)
+- Gradient from red to green
+- Arrow in neutral dark color
+
+General:
+- Background: White or very light gray
+- Text: Dark gray (#1f2937)
+- Accents: Red (problem), Green (solution)
+
+Visual Specifications
+
+India Map:
+- Recognizable outline shape
+- Clean vector rendering
+- Used in both sections with different treatments:
+  - Left: small, partial coverage indicated
+  - Right: full coverage with grid overlay
+  - Center: transition state
+
+Satellite Tile Visual:
+- Small square representing 10,000 km²
+- Simple satellite imagery representation
+- Grid pattern to show coverage area
+
+Time Indicators:
+- Clock icons prominent
+- Hours clearly labeled
+- Visual size difference (12h small, 7000h large)
+
+Scale Comparison:
+- Clear visual hierarchy showing 10,000 → 2,800,000
+- Numerical emphasis
+- Area proportions represented
+
+Workflow Icons:
+- Manual annotation: person + magnifying glass/pointer
+- AI detection: computer chip + eye/camera
+- Re-annotation: circular refresh arrows
+- Speed: fast-forward symbol, lightning bolt
+
+Data Flow:
+Left side:
+- Input: small area
+- Process: manual work (slow)
+- Output: limited coverage
+- Problem: doesn't scale, needs re-work
+
+Right side:
+- Input: entire country
+- Process: automated AI (fast)
+- Output: complete coverage
+- Solution: scales, reproducible, monitors change
+
+Hard Negative Constraints
+
+❌ No spelling errors
+❌ No cluttered information
+❌ No photographs of people
+❌ No cartoon/playful style
+❌ No dark backgrounds
+❌ No excessive gradients
+❌ No 3D elements
+❌ No stock imagery
+❌ No pie charts
+❌ No complex graphs
+❌ No URLs or links
+❌ No institution logos beyond footer
+❌ No technical jargon beyond what's specified
+
+Layout Specifications
+
+Clear three-column structure:
+- Left: 35-40% (Problem)
+- Center: 20-25% (Transition)
+- Right: 35-40% (Solution)
+
+Vertical organization:
+- Top: Section headers
+- Middle: Main visual content
+- Bottom: Conclusion statements
+
+Adequate whitespace between elements
+Professional spacing and alignment
+Clear visual flow: left → center → right
+
+Quality Requirements
+
+Maximum resolution (8K target)
+Crisp icon rendering
+Clean text rendering (all readable)
+Professional infographic quality
+Print-ready
+No compression artifacts
+
+Key Messages to Convey Visually
+
+Scale Problem:
+- What takes 12 hours for small area
+- Becomes 7,000+ hours for India
+- Technology changes require complete redo
+- Human effort cannot scale to national monitoring
+
+Solution Impact:
+- AI processes entire country in minutes
+- Enables continuous monitoring
+- Reproducible methodology
+- Can track technology changes
+- Supports policy for unorganized sector
+
+Visual Impact:
+- Immediate understanding of scale mismatch
+- Clear problem → solution narrative
+- Quantitative comparison prominent
+- Professional, data-driven aesthetic
+
+Context
+
+Unorganized brick kiln sector in India
+Need for emission monitoring and compliance
+Manual satellite image annotation doesn't scale
+AI/ML object detection solution needed
+Supports environmental policy and regulation
+Enables tracking of technology adoption (cleaner kilns)
+Critical for air quality management
+
+Educational Purpose:
+Show research motivation clearly
+Justify need for automated solution
+Demonstrate scale of the challenge
+Communicate impact of AI/ML approach
