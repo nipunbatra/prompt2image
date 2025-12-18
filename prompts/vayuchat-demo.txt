@@ -1,0 +1,224 @@
+Output & Canvas
+
+Aspect ratio: 16:9 (widescreen presentation slide)
+
+Resolution: Ultra-high resolution, ≥ 8K quality
+(extremely sharp, suitable for large projector screens and conference posters)
+
+Style: clean modern interface showcase
+Professional demo poster aesthetic
+
+Purpose: Conference demo poster showcasing VayuChat's capabilities
+
+Allowed Text (ONLY the following, EXACT spellings)
+
+Main Title (top center):
+VayuChat
+
+Subtitle (smaller, under title):
+Natural Language Interface for Air Quality Data Analysis
+
+Logo:
+Sustainability Lab logo (sigmoid curve with axes + "SUSTAINABILITY LAB" text)
+- Place in top-left or top-center
+- Clean, minimal rendering
+- Logo consists of: S-curve on X-Y axes + text "SUSTAINABILITY" (larger) and "LAB" (smaller, spaced)
+
+Section Labels (elegant, minimal):
+A
+B
+C
+
+Example A - Text Response:
+Query: Which city had the highest PM2.5 in 2023?
+Response: Byrnihat recorded the highest annual average PM2.5 in 2023 at 151.51 μg/m³
+
+Example B - Data Table Response:
+Query: Show me top 5 most polluted cities in winter 2023
+Response: [Clean data table showing]
+City          PM2.5 (μg/m³)
+Byrnihat      187.3
+Delhi         165.8
+Ghaziabad     152.4
+Patna         148.9
+Faridabad     142.1
+
+Example C - Visualization Response:
+Query: Compare Delhi PM2.5 trends: 2022 vs 2023
+Response: [Clean line chart visualization showing two lines across months]
+- X-axis: Jan, Feb, Mar, Apr, May, Jun, Jul, Aug, Sep, Oct, Nov, Dec
+- Y-axis: PM2.5 (μg/m³) ranging 0-300
+- Two lines: 2022 (one color), 2023 (another color)
+- Legend showing 2022 and 2023
+
+Code Panel (visible in one example):
+import pandas as pd
+import matplotlib.pyplot as plt
+import seaborn as sns
+
+# Load and filter data
+df = pd.read_csv('cpcb_data.csv')
+delhi = df[df['city'] == 'Delhi']
+
+# Create visualization
+plt.plot(delhi['month'], delhi['pm25_2022'], label='2022')
+plt.plot(delhi['month'], delhi['pm25_2023'], label='2023')
+
+Footer Text:
+IIT Gandhinagar
+
+⚠️ CRITICAL: No spelling mistakes. No extra text beyond specified elements.
+
+Visual Composition
+
+A clean, three-panel horizontal layout showcasing VayuChat's three response types. Modern, editorial poster design.
+
+Header Section (Top 15%)
+Sustainability Lab logo on left or center
+"VayuChat" title prominently centered
+Subtitle beneath in smaller font
+Clean white or very light gray background
+
+Three-Panel Layout (Panels A, B, C)
+
+Each panel shows:
+- Label (A, B, or C) in elegant circle or minimal badge (top-left of panel)
+- User query in clean sans-serif
+- VayuChat response (appropriate format)
+- Subtle card/panel styling
+
+Panel A (Left third) - Text Answer
+Natural language question at top
+Text-based answer below
+Clean, readable typography
+Minimal chat bubble or card aesthetic
+No code shown (pure conversational response)
+
+Panel B (Center third) - Tabular Data
+Question requesting data
+Clean table rendering below
+Proper column alignment
+Professional table styling (subtle borders, header row emphasis)
+Compact, readable font
+
+Panel C (Right third) - Visualization
+Question asking for comparison/trends
+Line chart visualization below
+Clean matplotlib/seaborn aesthetic
+Proper axis labels and legend
+Data-ink ratio optimized (minimal chartjunk)
+Optional: small code snippet below or beside chart
+
+Design Elements
+
+Clean white cards/panels with subtle shadows
+Elegant label badges for A, B, C (possibly circular or rounded rectangle)
+Consistent typography hierarchy throughout
+Adequate whitespace between panels
+Professional color coding for different response types
+Modern UI aesthetic (not too flat, not too skeuomorphic)
+
+Design Language
+
+Modern interface design (inspired by Streamlit, Observable, Jupyter)
+Clean editorial poster aesthetic
+Professional conference demo quality
+Inspired by: ACM CHI demos, UIST posters, NeurIPS system demonstrations
+Typography: Clean sans-serif (Inter, SF Pro, Segoe UI family)
+
+Color Palette
+
+Background: white to very light warm gray (#fafafa, #f8f8f8)
+Panels: white with subtle shadows
+Primary text: dark gray (#1f2937)
+Secondary text: medium gray (#6b7280)
+Accent 1: teal/blue for VayuChat branding (#0ea5e9, #06b6d4)
+Accent 2: coral/orange for highlights (#f97316, #fb923c)
+Chart colors: professional palette (blues, teals, oranges - distinct but harmonious)
+Table styling: minimal borders in light gray
+Code syntax: standard highlighting (blue for keywords, green for strings, gray for comments)
+
+Logo Rendering
+
+Sustainability Lab logo:
+- Sigmoid S-curve on X-Y axes
+- Axes in dark gray (#444444)
+- S-curve in black, bold stroke
+- Text "SUSTAINABILITY" in larger sans-serif
+- Text "LAB" in smaller, letter-spaced sans-serif below
+- Clean, professional rendering
+- Appropriate size (not too large, not too small)
+
+Panel Specifications
+
+Panel Dimensions:
+Each panel approximately 30% width
+2-3% margins between panels
+Consistent heights
+
+Label Badges (A, B, C):
+Circular or rounded rectangle
+Subtle background color or border
+Clear, readable letter
+Top-left corner of each panel
+Elegant, minimal design
+
+Query Text:
+Sans-serif, medium weight
+Slightly smaller than title
+Dark gray color
+Clean, readable
+
+Response Styling:
+Panel A: Natural paragraph text, readable font size
+Panel B: Monospace or tabular font, aligned columns, header emphasis
+Panel C: Clean chart with proper matplotlib styling, axis labels clearly visible
+
+Hard Negative Constraints
+
+❌ No spelling errors anywhere
+❌ No arrows or flow diagrams
+❌ No browser chrome or window decorations
+❌ No cartoon or playful illustration style
+❌ No cluttered interface elements
+❌ No dark mode aesthetics
+❌ No neon or fluorescent colors
+❌ No 3D rendered elements
+❌ No stock photos or generic imagery
+❌ No visible URLs or web addresses
+❌ No code in Panels A and B (only in Panel C if space permits)
+❌ No chat interface UI elements (focus on query-response pairs cleanly)
+❌ No timestamps or metadata clutter
+❌ No Lorem Ipsum or placeholder text
+❌ No abbreviations not specified above
+
+Layout & Spacing
+
+Consistent padding within panels (15-20px)
+Equal spacing between panels
+Adequate whitespace around all elements
+Clear visual hierarchy: Logo → Title → Panels → Footer
+Footer text small, unobtrusive
+No cramped or crowded areas
+
+Quality Requirements
+
+Maximum available resolution (8K target)
+Crisp text rendering (all labels readable at poster scale)
+Clean chart rendering (anti-aliased, publication quality)
+Professional table formatting
+No compression artifacts
+Print-ready quality for A0 poster
+
+Functional Showcase
+
+VayuChat demonstrates three core capabilities:
+1. Conversational Q&A (natural language understanding and response)
+2. Data Retrieval (structured tabular output)
+3. Visual Analytics (automated chart generation)
+
+System built on CPCB air quality dataset
+Powered by LLM for code generation
+Generates executable Python (pandas, matplotlib, seaborn)
+Designed for researchers, policymakers, citizens
+Democratizes access to environmental data insights
