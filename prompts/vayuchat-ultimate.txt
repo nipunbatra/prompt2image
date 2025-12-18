@@ -1,0 +1,312 @@
+Output & Canvas
+
+Aspect ratio: 16:9 (widescreen presentation slide)
+Resolution: Ultra-high resolution, ≥ 8K quality
+(extremely sharp, suitable for conference posters and large displays)
+
+Style: Modern web application interface showcase
+Clean, professional demo aesthetic
+
+Purpose: Single comprehensive poster showcasing VayuChat's complete capabilities
+
+Allowed Text (EXACT spellings, no variations)
+
+Header Section:
+VayuChat
+Natural Language Interface for Air Quality Data Analysis
+
+Logo:
+SUSTAINABILITY LAB logo (sigmoid S-curve on XY axes + text)
+
+Browser Interface Labels:
+AI Model: gpt-oss-120b
+
+Quick Queries
+Select a question to analyze:
+Which city had the highest PM2.5 in 2023?
+Show monthly PM2.5 trends for Delhi in 2023
+Compare PM2.5 levels between winter and summer
+
+Chat Example 1 - Tabular Response:
+User: Which cities had the worst air quality in winter 2023?
+VayuChat: Based on December 2023 data, the most polluted cities were:
+
+City          PM2.5 (μg/m³)
+Byrnihat      187.3
+Delhi         165.8
+Ghaziabad     152.4
+Patna         148.9
+Faridabad     142.1
+
+Chat Example 2 - Visualization Response:
+User: Compare Delhi PM2.5 trends: 2022 vs 2023
+VayuChat: Here's the comparison showing monthly trends for both years:
+
+[Line chart showing:]
+X-axis: Jan, Feb, Mar, Apr, May, Jun, Jul, Aug, Sep, Oct, Nov, Dec
+Y-axis: PM2.5 (μg/m³)
+Two lines: 2022 (blue) and 2023 (orange)
+Clean matplotlib styling
+
+Code Panel (visible below one chat):
+import pandas as pd
+import matplotlib.pyplot as plt
+
+df = pd.read_csv('cpcb_data.csv')
+delhi = df[df['city'] == 'Delhi']
+
+plt.plot(delhi['month'], delhi['pm25_2022'], label='2022')
+plt.plot(delhi['month'], delhi['pm25_2023'], label='2023')
+plt.xlabel('Month')
+plt.ylabel('PM2.5 (μg/m³)')
+plt.legend()
+plt.show()
+
+Comparison Section (Right Panel):
+Why VayuChat?
+
+Traditional Approach:
+Static Dashboards
+✗ Fixed visualizations
+✗ No custom queries
+✗ Requires technical expertise
+✗ Limited interactivity
+
+VayuChat Approach:
+Conversational Analytics
+✓ Natural language queries
+✓ Custom analysis on demand
+✓ Accessible to all users
+✓ Transparent code generation
+✓ Reproducible results
+
+Key Features:
+• Multi-model LLM support (GPT-OSS, Qwen, Llama, Gemini)
+• Integrated datasets: CPCB, NCAP funding, demographics
+• Real-time code generation
+• Transparent and reproducible
+• Policy-relevant insights
+
+Footer:
+IIT Gandhinagar  •  sustainability-lab.github.io
+
+⚠️ CRITICAL: Perfect spelling. No extra text. Clean interface design.
+
+Visual Composition
+
+Overall Layout (Three main sections):
+
+Left Section (65% width): Browser Window with VayuChat Interface
+Right Section (35% width): Comparison Panel + Key Features
+
+Browser Window Design:
+Clean browser chrome (minimal, modern)
+Address bar showing: vayuchat.streamlit.app (or similar)
+No actual browser buttons/navigation (keep clean)
+
+VayuChat Interface Layout:
+
+Header Area:
+- SUSTAINABILITY LAB logo (top-left)
+- "VayuChat" title (centered, prominent)
+- Subtitle below (smaller font)
+
+Sidebar (Left 25% of browser):
+- Model dropdown: "AI Model: gpt-oss-120b"
+- Quick Queries section with expandable list
+- Clean white background
+- Subtle borders
+
+Main Chat Area (Right 75% of browser):
+- Chat conversation flow (top to bottom)
+- User messages: Blue bubble, right-aligned style
+- VayuChat responses: Light gray bubble, left-aligned
+
+Chat Example 1 (Tabular):
+User query bubble
+VayuChat response with clean data table
+5 cities × 2 columns
+Proper alignment and spacing
+
+Chat Example 2 (Visualization):
+User query bubble
+VayuChat response text
+Embedded line chart (clean matplotlib aesthetic)
+2-line comparison, legend, axis labels
+
+Code Panel (below one chat):
+Collapsible/expandable section
+"View Generated Code" header
+Python code with syntax highlighting
+Clean monospace font
+
+Comparison Panel Design (Right side):
+
+Header: "Why VayuChat?" (bold, prominent)
+
+Two-column comparison:
+Left column: "Traditional Approach" with red X marks
+Right column: "VayuChat Approach" with green check marks
+
+Key Features list below:
+Bullet points with key capabilities
+Concise, impactful statements
+
+Footer area:
+IIT Gandhinagar credit
+Website link
+
+Design Language
+
+Modern SaaS/web app aesthetic
+Clean, professional interface design
+Inspired by: Streamlit, Gradio, ChatGPT interface, Observable
+Typography: Clean sans-serif (Inter, SF Pro, Segoe UI)
+Professional, conference-ready quality
+
+Color Palette
+
+Background: White to very light gray (#fafafa)
+Browser window: White with subtle shadow
+Sidebar: Light gray background (#f5f5f5)
+User messages: Blue accent (#3b82f6)
+VayuChat messages: Light gray (#e5e7eb)
+Text: Dark gray (#1f2937) primary, medium gray (#6b7280) secondary
+Code: Standard syntax highlighting (blue keywords, green strings, gray comments)
+Comparison section: Light background, subtle borders
+Check marks: Green (#10b981)
+X marks: Red (#ef4444)
+Chart colors: Professional palette (blue, orange for 2-line comparison)
+
+Logo Rendering
+
+SUSTAINABILITY LAB logo:
+- S-curve sigmoid on XY axes
+- Clean vector rendering
+- Axes in dark gray
+- Curve in black
+- Text "SUSTAINABILITY" (larger)
+- Text "LAB" (smaller, letter-spaced)
+- Appropriate size (not too large)
+- Top-left of interface
+
+Interface Elements
+
+Model Dropdown:
+- Clean dropdown UI
+- Currently showing: "gpt-oss-120b"
+- Small dropdown arrow
+
+Quick Queries:
+- Section title
+- Expandable question list
+- 3 example questions shown
+- Clean button/list styling
+
+Chat Bubbles:
+- Rounded corners
+- Adequate padding
+- Clear sender distinction
+- Professional messaging UI
+
+Data Table:
+- Clean borders
+- Header row emphasis
+- Right-aligned numbers
+- Left-aligned city names
+- Proper spacing
+
+Chart Visualization:
+- Clean matplotlib/seaborn style
+- Clear axis labels
+- Legend positioned well
+- Professional color choices
+- Anti-aliased rendering
+
+Code Panel:
+- Syntax highlighted
+- Monospace font
+- Line breaks preserved
+- Readable font size
+
+Comparison Panel:
+- Two-column layout
+- Clear visual distinction
+- Icons (✓ and ✗) prominent
+- Concise bullet points
+- Professional styling
+
+Hard Negative Constraints
+
+❌ No spelling errors anywhere
+❌ No cluttered interface
+❌ No dark mode
+❌ No cartoon/playful style
+❌ No excessive shadows or gradients
+❌ No actual browser window frame (keep minimal)
+❌ No URLs in address bar beyond domain
+❌ No navigation buttons/tabs
+❌ No timestamps or metadata clutter
+❌ No Lorem Ipsum text
+❌ No more than 2-3 chat exchanges shown
+❌ No photorealistic screenshots
+❌ No busy dashboards
+❌ No pie charts or complex visualizations
+❌ No geographic maps in this version
+❌ No excessive iconography
+
+Layout Specifications
+
+Browser window: 60-65% of total width
+Comparison panel: 30-35% of total width
+Small gap between sections
+Browser window has subtle shadow
+Clean whitespace throughout
+Professional spacing and alignment
+
+Chat Interface Specifications
+
+Sidebar: 20-25% of browser width
+Chat area: 75-80% of browser width
+2 complete chat exchanges shown
+One shows table output
+One shows chart visualization
+Code panel visible for one example
+Adequate spacing between messages
+Clean, uncluttered conversation flow
+
+Quality Requirements
+
+Maximum resolution (8K target)
+Crisp text rendering (all labels readable)
+Clean chart rendering (publication quality)
+Professional table formatting
+No compression artifacts
+Print-ready for A0 poster
+All interface elements properly aligned
+Consistent styling throughout
+
+Functional Showcase
+
+VayuChat demonstrates:
+1. Conversational interface (natural language → insights)
+2. Multiple response types (text, table, visualization)
+3. Transparent code generation (reproducibility)
+4. Accessibility (no technical expertise needed)
+5. Flexibility (custom queries, not fixed dashboards)
+
+System advantages:
+- LLM-powered code generation reduces hallucinations
+- Multi-model support (compare different LLMs)
+- Integrated datasets (CPCB, NCAP, demographics)
+- Policy-relevant for government and researchers
+- Educational tool for data science
+- Democratizes environmental data access
+
+Context from paper:
+- Addresses 1.6 million premature deaths from air pollution in India
+- Turns dispersed data into decisions
+- Makes complex analytics accessible to policymakers, researchers, citizens
+- Generates executable Python code for reproducibility
+- Supports queries like: "Which cities improved after NCAP funding?"
+- Real-world application: Delhi pollution crisis investigation
