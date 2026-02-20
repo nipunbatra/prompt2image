@@ -66,14 +66,30 @@ def generate_gallery():
     outputs_dir = Path('outputs')
     prompts_dir = Path('prompts')
     examples_dir = Path('examples')
+    examples_outputs_dir = Path('examples/outputs')
 
-    # Get all images and prompts
-    images = sorted([f.name for f in outputs_dir.glob('*.png')], reverse=True) if outputs_dir.exists() else []
-    prompts = [f.name for f in prompts_dir.glob('*.txt')] if prompts_dir.exists() else []
+    # Get all images from outputs/ and examples/outputs/
+    images = []
+    image_base_dir = None  # track which dir images come from
 
-    # Also check examples/ for prompts
+    if examples_outputs_dir.exists() and list(examples_outputs_dir.glob('*.png')):
+        images = sorted([f.name for f in examples_outputs_dir.glob('*.png')], reverse=True)
+        image_base_dir = 'examples/outputs'
+    if outputs_dir.exists():
+        images += sorted([f.name for f in outputs_dir.glob('*.png')], reverse=True)
+        if not image_base_dir:
+            image_base_dir = 'outputs'
+
+    # Get all prompts
+    prompts = []
+    if prompts_dir.exists():
+        prompts += [f.name for f in prompts_dir.glob('*.txt')]
     if examples_dir.exists():
         prompts += [f.name for f in examples_dir.glob('*.txt')]
+
+    # Determine image and prompt base dirs for the HTML
+    img_base = image_base_dir or 'examples/outputs'
+    prompt_base = 'examples' if examples_dir.exists() else 'prompts'
 
     # Build image data
     gallery_data = []
@@ -321,6 +337,8 @@ def generate_gallery():
 
     <script>
         // Image and prompt data
+        const imgBase = 'IMG_BASE_PLACEHOLDER';
+        const promptBase = 'PROMPT_BASE_PLACEHOLDER';
         const images = IMAGE_DATA_PLACEHOLDER;
 
         // Generate gallery cards
@@ -332,7 +350,7 @@ def generate_gallery():
                 card.className = 'card';
 
                 card.innerHTML = `
-                    <img src="outputs/${img.filename}" alt="${img.title}" class="card-image" onclick="openImageModal('outputs/${img.filename}')">
+                    <img src="${imgBase}/${img.filename}" alt="${img.title}" class="card-image" onclick="openImageModal('${imgBase}/${img.filename}')">
                     <div class="card-content">
                         <h3 class="card-title">${img.title}</h3>
                         <div class="card-meta">
@@ -340,7 +358,7 @@ def generate_gallery():
                         </div>
                         <div class="btn-group">
                             <button class="btn" onclick="viewPrompt('${img.promptFile}')">View Prompt</button>
-                            <a href="outputs/${img.filename}" download class="btn">Download</a>
+                            <a href="${imgBase}/${img.filename}" download class="btn">Download</a>
                         </div>
                     </div>
                 `;
@@ -367,7 +385,7 @@ def generate_gallery():
             const promptText = document.getElementById('promptText');
 
             try {
-                const response = await fetch(`prompts/${promptFile}`);
+                const response = await fetch(`${promptBase}/${promptFile}`);
                 const text = await response.text();
                 promptText.textContent = text;
                 modal.classList.add('active');
@@ -400,10 +418,14 @@ def generate_gallery():
 </body>
 </html>"""
 
-    # Replace placeholder with actual data
+    # Replace placeholders with actual data
     html_content = html_template.replace(
         'IMAGE_DATA_PLACEHOLDER',
         json.dumps(gallery_data, indent=12)
+    ).replace(
+        'IMG_BASE_PLACEHOLDER', img_base
+    ).replace(
+        'PROMPT_BASE_PLACEHOLDER', prompt_base
     )
 
     # Write HTML file
