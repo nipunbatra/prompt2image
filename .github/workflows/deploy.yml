@@ -36,10 +36,11 @@ jobs:
       - name: Generate Gallery
         run: python generate_gallery.py
 
-      - name: Copy outputs and prompts to docs
+      - name: Copy outputs and prompts to docs (if they exist)
         run: |
-          cp -r outputs docs/
-          cp -r prompts docs/
+          [ -d outputs ] && cp -r outputs docs/ || true
+          [ -d prompts ] && cp -r prompts docs/ || true
+          [ -d examples ] && cp -r examples docs/ || true
 
       - name: Setup Pages
         uses: actions/configure-pages@v4

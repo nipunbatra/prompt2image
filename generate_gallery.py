@@ -65,10 +65,15 @@ def generate_gallery():
 
     outputs_dir = Path('outputs')
     prompts_dir = Path('prompts')
+    examples_dir = Path('examples')
 
     # Get all images and prompts
-    images = sorted([f.name for f in outputs_dir.glob('*.png')], reverse=True)
-    prompts = [f.name for f in prompts_dir.glob('*.txt')]
+    images = sorted([f.name for f in outputs_dir.glob('*.png')], reverse=True) if outputs_dir.exists() else []
+    prompts = [f.name for f in prompts_dir.glob('*.txt')] if prompts_dir.exists() else []
+
+    # Also check examples/ for prompts
+    if examples_dir.exists():
+        prompts += [f.name for f in examples_dir.glob('*.txt')]
 
     # Build image data
     gallery_data = []
@@ -289,7 +294,7 @@ def generate_gallery():
     <div class="container">
         <header>
             <h1>AI Generated Images Gallery</h1>
-            <p class="subtitle">Generated with Gemini 3 Pro Image</p>
+            <p class="subtitle">Generated with Gemini Image Models</p>
         </header>
 
         <div class="gallery" id="gallery">
@@ -403,6 +408,7 @@ def generate_gallery():
 
     # Write HTML file
     output_path = Path('docs/index.html')
+    output_path.parent.mkdir(exist_ok=True)
     output_path.write_text(html_content)
 
     print(f"✓ Gallery generated successfully!")
