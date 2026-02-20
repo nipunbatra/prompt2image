@@ -1,0 +1,14 @@
+A beautiful illustrated flowchart showing the journey of coffee from farm to cup.
+
+Steps (left to right or top to bottom):
+1. Coffee cherries on a plant (green/red berries)
+2. Harvesting (hands picking)
+3. Processing (washing/drying)
+4. Roasting (beans turning brown)
+5. Grinding
+6. Brewing
+7. A steaming cup of coffee
+
+Connect each step with curved arrows. Each step should be in a rounded card with a small illustration and label. Use warm earth tones: browns, greens, cream. Add a subtle coffee-stain watercolor texture in the background.
+
+Style: Flat illustration, warm and inviting, suitable for a cafe wall or food blog.

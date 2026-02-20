@@ -1,0 +1,7 @@
+A stunning educational poster of the Solar System.
+
+Show all 8 planets in order from left to right, to scale relative to each other (not distance). Each planet should have its name labeled below. The Sun is partially visible on the far left edge, glowing orange-yellow.
+
+Key details: Saturn with prominent rings, Jupiter with the Great Red Spot, Earth with visible continents, Mars with reddish hue. Include a thin orbital path line for each planet.
+
+Style: Deep space black background with subtle star field. Photorealistic planet rendering. Clean white sans-serif labels. Bottom text: "Our Solar System — Not to distance scale". Suitable for a classroom wall poster.

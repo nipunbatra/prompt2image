@@ -1,0 +1,14 @@
+A clean technical diagram showing an end-to-end machine learning pipeline.
+
+Flow (left to right):
+1. Raw Data (database icon, messy) →
+2. Data Cleaning (filter icon, sparkles) →
+3. Feature Engineering (wrench icon) →
+4. Train/Test Split (split arrow, 80/20) →
+5. Model Training (neural network icon, with "GPU" badge) →
+6. Evaluation (bar chart with metrics: Accuracy, F1, AUC) →
+7. Deployment (cloud/server icon, "Production API")
+
+Below the main flow, a feedback loop arrow goes from Evaluation back to Feature Engineering labeled "Iterate".
+
+Style: Modern tech diagram on white background. Use a consistent blue-to-purple gradient color scheme. Rounded rectangles for each step, connected by thick arrows. Professional enough for a technical presentation or ML course.

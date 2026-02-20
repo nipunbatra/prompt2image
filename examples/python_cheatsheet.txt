@@ -1,0 +1,13 @@
+A compact Python programming cheat sheet poster.
+
+Sections (in a clean grid layout):
+- Data Types: int, float, str, list, dict, tuple, set, bool
+- Control Flow: if/elif/else, for, while, try/except
+- List Comprehensions: [x**2 for x in range(10)]
+- String Methods: .split(), .join(), .strip(), .format()
+- File I/O: with open() as f
+- Common Built-ins: len(), range(), enumerate(), zip(), map()
+
+Each section in a colored card with a header and monospace code examples. Use a dark theme (dark gray background #2d2d2d) with syntax-highlighted code: keywords in blue, strings in green, comments in gray.
+
+Style: Developer-friendly, clean monospace font for code, suitable for printing and pinning next to a monitor.
