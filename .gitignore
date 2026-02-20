@@ -41,3 +41,12 @@ Thumbs.db
 # Temporary files
 *.tmp
 *.log
+
+# Generated outputs (images and prompts are user-specific)
+outputs/
+prompts/
+docs/
+
+# Stray generated files in root
+*.png
+*.html

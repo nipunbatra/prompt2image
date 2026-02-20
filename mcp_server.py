@@ -19,10 +19,17 @@ from mcp.types import Tool, TextContent
 # Initialize MCP server
 server = Server("prompt2image")
 
-# Repository paths
-REPO_DIR = Path(__file__).parent
-OUTPUTS_DIR = REPO_DIR / "outputs"
-PROMPTS_DIR = REPO_DIR / "prompts"
+# Available image generation models
+IMAGE_MODELS = {
+    'pro': 'models/gemini-3-pro-image-preview',      # Best quality, slower
+    'flash': 'models/gemini-2.5-flash-image',         # Faster, cheaper
+}
+DEFAULT_MODEL = 'pro'
+
+# Output to caller's working directory
+CWD = Path.cwd()
+OUTPUTS_DIR = CWD / "outputs"
+PROMPTS_DIR = CWD / "prompts"
 
 
 @server.list_tools()
@@ -31,7 +38,7 @@ async def list_tools() -> list[Tool]:
     return [
         Tool(
             name="generate_image",
-            description="Generate a 4K image (16:9) from a text prompt using Gemini 3 Pro Image. Takes 30-60 seconds. Returns the path to the generated image.",
+            description="Generate a 4K image from a text prompt using Gemini image models. Takes 30-60 seconds. Returns the path to the generated image. Saves outputs and prompts in the caller's working directory.",
             inputSchema={
                 "type": "object",
                 "properties": {
@@ -42,6 +49,18 @@ async def list_tools() -> list[Tool]:
                     "filename": {
                         "type": "string",
                         "description": "Optional base filename (without extension or timestamp)"
+                    },
+                    "model": {
+                        "type": "string",
+                        "description": f"Model to use: 'pro' (best quality, default) or 'flash' (faster). Available: {', '.join(IMAGE_MODELS.keys())}",
+                        "enum": list(IMAGE_MODELS.keys()),
+                        "default": DEFAULT_MODEL
+                    },
+                    "aspect_ratio": {
+                        "type": "string",
+                        "description": "Aspect ratio: '16:9' (landscape, default), '9:16' (portrait), '1:1' (square), '4:3', '3:4'",
+                        "enum": ["16:9", "9:16", "1:1", "4:3", "3:4"],
+                        "default": "16:9"
                     }
                 },
                 "required": ["prompt"]
@@ -70,7 +89,9 @@ async def call_tool(name: str, arguments: dict) -> list[TextContent]:
     if name == "generate_image":
         result = await generate_image(
             arguments.get("prompt", ""),
-            arguments.get("filename")
+            arguments.get("filename"),
+            arguments.get("model", DEFAULT_MODEL),
+            arguments.get("aspect_ratio", "16:9")
         )
     elif name == "view_prompt":
         result = view_prompt(arguments.get("image_name", ""))
@@ -80,8 +101,8 @@ async def call_tool(name: str, arguments: dict) -> list[TextContent]:
     return [TextContent(type="text", text=str(result))]
 
 
-async def generate_image(prompt: str, filename: str = None) -> str:
-    """Generate an image from a text prompt using Gemini 3 Pro Image."""
+async def generate_image(prompt: str, filename: str = None, model: str = None, aspect_ratio: str = "16:9") -> str:
+    """Generate an image from a text prompt using Gemini image models."""
     try:
         from google import genai
         from google.genai import types
@@ -93,7 +114,13 @@ async def generate_image(prompt: str, filename: str = None) -> str:
     if "GEMINI_API_KEY" not in os.environ:
         return "Error: GEMINI_API_KEY not set. Export it or add to ~/.zsh_secrets"
 
-    # Ensure directories exist
+    # Resolve model
+    model_key = model or DEFAULT_MODEL
+    image_model = IMAGE_MODELS.get(model_key)
+    if not image_model:
+        return f"Error: Unknown model '{model_key}'. Available: {', '.join(IMAGE_MODELS.keys())}"
+
+    # Ensure output directories exist (in caller's CWD)
     OUTPUTS_DIR.mkdir(exist_ok=True)
     PROMPTS_DIR.mkdir(exist_ok=True)
 
@@ -119,11 +146,11 @@ async def generate_image(prompt: str, filename: str = None) -> str:
         client = genai.Client(api_key=os.environ["GEMINI_API_KEY"])
 
         response = client.models.generate_content(
-            model="models/gemini-3-pro-image-preview",
+            model=image_model,
             contents=prompt,
             config=types.GenerateContentConfig(
                 image_config=types.ImageConfig(
-                    aspect_ratio="16:9",
+                    aspect_ratio=aspect_ratio,
                     image_size="4K"
                 )
             )
@@ -145,6 +172,8 @@ async def generate_image(prompt: str, filename: str = None) -> str:
                             f"Image generated successfully!\n"
                             f"  Path: {output_file}\n"
                             f"  Size: {img.size[0]}x{img.size[1]} pixels\n"
+                            f"  Model: {image_model} ({model_key})\n"
+                            f"  Aspect ratio: {aspect_ratio}\n"
                             f"  Prompt saved: {prompt_file}"
                         )
 
@@ -169,8 +198,10 @@ def view_prompt(image_name: str) -> str:
                 break
 
     if not image_path:
-        images = sorted([f.name for f in OUTPUTS_DIR.glob("*.png")])[-10:]
-        return f"Image not found: {image_name}\n\nAvailable images:\n" + "\n".join(f"  - {i}" for i in images)
+        images = sorted([f.name for f in OUTPUTS_DIR.glob("*.png")])[-10:] if OUTPUTS_DIR.exists() else []
+        if not images:
+            return f"Image not found: {image_name}\n\nNo images found in {OUTPUTS_DIR}"
+        return f"Image not found: {image_name}\n\nAvailable images in {OUTPUTS_DIR}:\n" + "\n".join(f"  - {i}" for i in images)
 
     # Find matching prompt
     base_name = image_path.stem

@@ -1,0 +1,10 @@
+Design a minimal infographic showing "Global Temperature Anomaly 1880-2024".
+
+Layout:
+- Title at top in bold dark text
+- A stylized warming stripe visualization (horizontal bars transitioning from blue on the left to deep red on the right)
+- Below the stripes: a clean line chart showing the same trend
+- Key stat callout: "+1.2°C since pre-industrial era" in a highlighted box
+- Source attribution at bottom: "Data: NASA GISS"
+
+Style: Dark background (#1a1a2e), data in vibrant blues and reds, clean typography, no clutter. Suitable for a conference poster or social media post.

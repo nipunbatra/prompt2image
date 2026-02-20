@@ -1,0 +1,9 @@
+Create a clean, modern educational diagram of a neural network architecture.
+
+Show a simple feedforward network with:
+- 3 input nodes (labeled x1, x2, x3) on the left in blue
+- 4 hidden layer nodes in the middle in purple
+- 2 output nodes (labeled y1, y2) on the right in green
+- Arrows connecting all nodes between layers with varying thickness to show weights
+
+Style: Clean white background, soft shadows, rounded nodes, modern sans-serif labels. Include a small legend showing "Input Layer → Hidden Layer → Output Layer". Professional quality suitable for a textbook or lecture slide.

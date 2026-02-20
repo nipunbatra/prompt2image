@@ -1,111 +1,67 @@
-# AI Image Generator with Gemini
+# prompt2image
 
-Generate high-quality images from text prompts using Google's Gemini 3 Pro Image model.
-
-## Features
-
-- Generate 4K images (16:9 aspect ratio) from text prompts
-- Automatic timestamped filenames
-- Web gallery to showcase generated images
-- View generation prompts for each image
-- Automatic deployment to GitHub Pages
-
-## Repository Structure
-
-```
-.
-├── generate_poster.py      # Main script to generate images from prompts
-├── generate_gallery.py     # Script to build the HTML gallery
-├── prompts/                # Text files containing generation prompts
-├── outputs/                # Generated images (PNG format)
-└── docs/                   # Gallery website (auto-deployed to GitHub Pages)
-```
+Generate images from text prompts using Google's Gemini image models. Works as a CLI tool or as an MCP server for Claude Code.
 
 ## Setup
 
-1. **Get a Gemini API Key**
-   - Visit https://aistudio.google.com/apikey
-   - Create a new API key
-
-2. **Set Environment Variable**
-   ```bash
-   export GEMINI_API_KEY='your-api-key-here'
-   ```
-
-3. **Install Dependencies**
-   ```bash
-   pip install google-genai pillow
-   ```
-
-## Usage
-
-### Generate an Image
-
 ```bash
-python generate_poster.py prompts/your-prompt.txt
+pip install google-genai pillow mcp
+export GEMINI_API_KEY='your-key'  # Get one at https://aistudio.google.com/apikey
 ```
 
-This will:
-- Read the prompt from the text file
-- Generate a 4K image using Gemini 3 Pro Image
-- Save it as `your-prompt_YYYYMMDD_HHMMSS.png` in the `outputs/` folder
+## Models
 
-### Generate Gallery
+| Key | Model | Notes |
+|-----|-------|-------|
+| `pro` | `gemini-3-pro-image-preview` | Best quality (default) |
+| `flash` | `gemini-2.5-flash-image` | Faster, cheaper |
+
+## CLI Usage
 
 ```bash
-python generate_gallery.py
+# Basic (reads prompt from file, saves image next to it)
+python generate_poster.py examples/neural_network_diagram.txt
+
+# Choose model and orientation
+python generate_poster.py examples/climate_data_infographic.txt -m flash -o landscape
+
+# Portrait, specific paper size
+python generate_poster.py my_prompt.txt -o portrait -s A1
 ```
 
-This scans the `prompts/` and `outputs/` directories and generates an HTML gallery at `docs/index.html`.
+Options:
+- `-m, --model` — `pro` (default) or `flash`
+- `-o, --orientation` — `landscape` (default), `portrait`, or `square`
+- `-s, --size` — Paper size (`A0`–`A4`), auto-selects closest aspect ratio
 
-## Gallery Website
+Output images are saved alongside the prompt file with a timestamp.
 
-The gallery is automatically deployed to GitHub Pages when you push to the main branch.
+## MCP Server (Claude Code)
 
-View your gallery at: `https://[your-username].github.io/[repo-name]/`
+Add to your Claude Code MCP config (`~/.claude.json` or project `.mcp.json`):
 
-### Features:
-- Responsive grid layout
-- Click images to view full size
-- View generation prompts
-- Download images
-- Mobile-friendly design
+```json
+{
+  "mcpServers": {
+    "prompt2image": {
+      "command": "python",
+      "args": ["/path/to/prompt2image/mcp_server.py"]
+    }
+  }
+}
+```
 
-## Creating New Images
+Then in Claude Code, the `generate_image` tool is available with parameters:
+- `prompt` — The text prompt
+- `filename` — Optional base filename
+- `model` — `pro` or `flash`
+- `aspect_ratio` — `16:9`, `9:16`, `1:1`, `4:3`, `3:4`
 
-1. Create a new `.txt` file in the `prompts/` directory with your prompt
-2. Run: `python generate_poster.py prompts/your-prompt.txt`
-3. Run: `python generate_gallery.py` to update the gallery
-4. Commit and push to deploy
-
-## GitHub Actions
-
-The repository includes a GitHub Actions workflow that:
-- Automatically regenerates the gallery
-- Deploys to GitHub Pages
-- Runs on every push to main/master
-
-### Enable GitHub Pages
-
-1. Go to your repository Settings
-2. Navigate to Pages
-3. Under "Build and deployment":
-   - Source: GitHub Actions
-4. The site will be deployed automatically
+Images and prompts are saved in `outputs/` and `prompts/` in your current working directory.
 
 ## Examples
 
-Example prompts are included:
-- `overall-lab.txt` - Complex multi-section infographic
-- `sustainability_lab_prompt.txt` - Research lab visualization
-- `join-us.txt` - Recruitment poster
-
-## Notes
-
-- Each generation takes 30-60 seconds
-- Images are saved in PNG format with 300 DPI
-- Timestamps prevent filename collisions
-- The gallery automatically matches prompts to images
+See [`examples/`](examples/) for sample prompts at different complexity levels.
 
 ## License
 
